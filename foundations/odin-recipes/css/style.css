@@ -1,0 +1,20 @@
+body {
+	background-color: tan;
+	text-align: center;
+	list-style-position: inside;
+}
+
+h1, h2 {
+	font-size: 50px;
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul {
+	font-size: 30px;
+	text-align: center;
+	list-style-position: inside;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
