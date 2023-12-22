@@ -12,6 +12,28 @@ img {
   font-weight: 900;
 }
 
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+}
+
+.info-contents {
+  display: flex;
+  align-items: center;
+}
+
+info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 52px;
+  text-align: center;
+}
+
+
+
 /* do not edit this footer */
 .footer {
   position: fixed;
