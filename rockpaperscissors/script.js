@@ -68,13 +68,13 @@ function game() {
 	let playerWins = 0, computerWins = 0;
 	let count = 0;
 	while (count < 5) {
-		alert("Round " + (count + 1));
+		console.log("Round " + (count + 1));
 
 		let playerChoice = prompt("Rock, Paper, Scissors?");
 		let computerChoice = getComputerChoice();
 
 		let result = playRound(playerChoice, computerChoice);
-		alert(result);
+		console.log(result);
 
 		if (result.startsWith("You win")) {
 			playerWins++;
@@ -88,10 +88,10 @@ function game() {
 
 	// Final game outcome
 	if (playerWins > computerWins) {
-		alert("Congrats! You win the game!");
+		console.log("Congrats! You win the game!");
 
 	} else {
-		alert("Sorry. The machine wins. Try again.");
+		console.log("Sorry. The machine wins. Try again.");
 	}
 }
 
