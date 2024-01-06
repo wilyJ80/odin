@@ -66,9 +66,9 @@ function playRound(playerSelection, computerSelection) {
 function game() {
 
 	let playerWins = 0, computerWins = 0;
-	let count = 0;
+	/* let count = 0;
 	while (count < 5) {
-		console.log("Round " + (count + 1));
+		console.log("Round " + (count + 1)); */
 
 		let playerChoice = prompt("Rock, Paper, Scissors?");
 		let computerChoice = getComputerChoice();
@@ -78,13 +78,13 @@ function game() {
 
 		if (result.startsWith("You win")) {
 			playerWins++;
-			count++;
+			// count++;
 
 		} else if (result.startsWith("You lose")) {
 			computerWins++;
-			count++;
+			// count++;
 		}
-	}
+	// }
 
 	// Final game outcome
 	if (playerWins > computerWins) {
