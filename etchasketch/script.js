@@ -20,3 +20,9 @@ for (const box of boxes) {
 }
 
 // 2. Set up event: leave pixelated trail on divs
+// How to leave pixelated trail on divs:
+// 2.1 mousemove event listener?
+// 2.2 get correct mouse coordinates at div
+// 2.3 create dot div
+// 2.4 adjust its dimensions
+// 2.5 append this child
