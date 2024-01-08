@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+}
+
+.content {
+	height: 16px;
+	width: 16px;
+	background-color: #ffa;
+	border: 1px solid #000;
+}
