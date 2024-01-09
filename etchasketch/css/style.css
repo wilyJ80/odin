@@ -4,6 +4,7 @@
 
 .container {
 	display: flex;
+	flex-direction: column;
 }
 
 .box {
@@ -11,4 +12,14 @@
 	width: 16px;
 	background-color: white;
 	border: 1px solid #000;
+}
+
+.button {
+	order: 1;
+}
+
+.row {
+	display: flex;
+	order: 2;
+	font-style: 18px;
 }
