@@ -1,15 +1,21 @@
 const container = document.querySelector(".container");
 
 for (let i = 0; i < 16; i++) {
-	const box = document.createElement("div");
-	box.classList.add("box");
-	container.appendChild(box);
+	const row = document.createElement("div");
+
+	for (let j = 0; j < 16; j++) {
+		const box = document.createElement("div");
+		box.classList.add("box");
+		row.appendChild(box);
+	}
+
+	container.appendChild(row);
 }
 
 const boxes = document.querySelectorAll(".box");
 
 for (const box of boxes) {
 	box.addEventListener("mouseover", () => {
-		box.style.background = "lightblue";
+		box.style.backgroundColor = "#00f";
 	});
 }
