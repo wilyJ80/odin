@@ -24,3 +24,10 @@ for (const box of boxes) {
 const button = document.createElement("button");
 button.textContent = "Generate";
 container.appendChild(button);
+
+button.addEventListener("click", () => {
+	const noOfSquaresPerGrid = prompt(
+		"Number of squares per side for the new grid?",
+	);
+	container.remove();
+});
