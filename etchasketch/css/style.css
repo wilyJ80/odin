@@ -7,19 +7,24 @@
 	flex-direction: column;
 }
 
+.canvas {
+	display: flex;
+	order: 2;
+	height: 200px;
+	width: 200px;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+}
+
 .box {
-	height: 16px;
-	width: 16px;
-	background-color: white;
+	flex: 1 1 auto;
 	border: 1px solid #000;
 }
 
 .button {
 	order: 1;
-}
-
-.canvas {
-	display: flex;
-	order: 2;
-	font-style: 18px;
 }

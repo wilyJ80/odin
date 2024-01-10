@@ -6,16 +6,16 @@ function createGrid(dimensions = 16) {
 	container.appendChild(canvas);
 
 	for (let i = 0; i < dimensions; i++) {
-		const row = document.createElement("div");
-		row.classList.add("row");
+		const col = document.createElement("div");
+		col.classList.add("col");
 
 		for (let j = 0; j < dimensions; j++) {
 			const box = document.createElement("div");
 			box.classList.add("box");
-			row.appendChild(box);
+			col.appendChild(box);
 		}
 
-		canvas.appendChild(row);
+		canvas.appendChild(col);
 	}
 
 	container.appendChild(canvas);
