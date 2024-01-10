@@ -26,8 +26,19 @@ button.textContent = "Generate";
 container.appendChild(button);
 
 button.addEventListener("click", () => {
-	const noOfSquaresPerGrid = prompt(
-		"Number of squares per side for the new grid?",
-	);
-	container.remove();
+	for (;;) {
+		const noOfSquaresPerGrid = prompt(
+			"Number of squares per side for the new grid?",
+		);
+
+		if (noOfSquaresPerGrid <= 100) {
+			alert("Valid noOfSquaresPerGrid");
+			break;
+		}
+
+		alert("Invalid grid size: needs to be <= 100");
+	}
 });
+
+// Remove existing grid
+// Add ?x? grid without changing the amount of pixels used
