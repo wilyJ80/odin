@@ -1,6 +1,10 @@
 const container = document.querySelector(".container");
 
 function createGrid(dimensions = 16) {
+	const canvas = document.createElement("div");
+	canvas.classList.add("canvas");
+	container.appendChild(canvas);
+
 	for (let i = 0; i < dimensions; i++) {
 		const row = document.createElement("div");
 		row.classList.add("row");
@@ -11,19 +15,21 @@ function createGrid(dimensions = 16) {
 			row.appendChild(box);
 		}
 
-		container.appendChild(row);
+		canvas.appendChild(row);
+	}
+
+	container.appendChild(canvas);
+
+	const boxes = document.querySelectorAll(".box");
+
+	for (const box of boxes) {
+		box.addEventListener("mouseover", () => {
+			box.style.backgroundColor = "#00f";
+		});
 	}
 }
 
 createGrid();
-
-const boxes = document.querySelectorAll(".box");
-
-for (const box of boxes) {
-	box.addEventListener("mouseover", () => {
-		box.style.backgroundColor = "#00f";
-	});
-}
 
 const button = document.createElement("button");
 button.textContent = "Generate";
@@ -36,7 +42,8 @@ button.addEventListener("click", () => {
 		);
 
 		if (noOfSquaresPerGrid <= 100) {
-			alert("Valid noOfSquaresPerGrid");
+			document.querySelector(".canvas").remove();
+			createGrid(noOfSquaresPerGrid);
 			break;
 		}
 
@@ -44,5 +51,4 @@ button.addEventListener("click", () => {
 	}
 });
 
-// Remove existing grid
 // Add ?x? grid without changing the amount of pixels used

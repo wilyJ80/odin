@@ -18,7 +18,7 @@
 	order: 1;
 }
 
-.row {
+.canvas {
 	display: flex;
 	order: 2;
 	font-style: 18px;
