@@ -1,17 +1,21 @@
 const container = document.querySelector(".container");
 
-for (let i = 0; i < 16; i++) {
-	const row = document.createElement("div");
-	row.classList.add("row");
+function createGrid(dimensions = 16) {
+	for (let i = 0; i < dimensions; i++) {
+		const row = document.createElement("div");
+		row.classList.add("row");
 
-	for (let j = 0; j < 16; j++) {
-		const box = document.createElement("div");
-		box.classList.add("box");
-		row.appendChild(box);
+		for (let j = 0; j < dimensions; j++) {
+			const box = document.createElement("div");
+			box.classList.add("box");
+			row.appendChild(box);
+		}
+
+		container.appendChild(row);
 	}
-
-	container.appendChild(row);
 }
+
+createGrid();
 
 const boxes = document.querySelectorAll(".box");
 
