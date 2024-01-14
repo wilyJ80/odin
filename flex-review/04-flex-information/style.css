@@ -24,3 +24,22 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+/* end footer */
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.all-items {
+  display: flex;
+  gap: 52px;
+  text-align: center;
+}
+
+.item {
+  max-width: 200px;
+}
