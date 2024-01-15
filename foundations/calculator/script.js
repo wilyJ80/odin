@@ -32,3 +32,7 @@ function operate(operator, a, b) {
 		return divide(a, b);
 	}
 }
+
+const numberBtn = document.querySelectorAll(".number");
+let displayValue = document.querySelector(".display");
+/* display.textContent = ""; */
