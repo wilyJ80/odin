@@ -137,16 +137,18 @@ body {
 .call-to-action-section {
 	display: flex;
 	justify-content: space-around;
-	padding: 15%;
+	padding: 10%;
 }
 
 .action-box {
 	display: flex;
 	background-color: #3882f6;
 	color: white;
-	padding: 20px 190px;
 	border-radius: 10px;
-	gap: 20px;
+	width: 65vw;
+	height: 8vw;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .action-main {
@@ -155,8 +157,14 @@ body {
 }
 
 .sign-up-box {
+	display: flex;
 	border: 1px solid white;
 	border-radius: 10px;
+	justify-content: center;
+	align-items: center;
+	height: 30%;
+	width: 10vw;
+
 }
 
 .sign-up-text {
