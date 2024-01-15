@@ -76,3 +76,9 @@ body {
 	padding: 2px;
 	margin: 9px 0;
 }
+
+.info-title {
+	font-size: 36px;
+	font-weight: bolder;
+	color: #1f2937;
+}
