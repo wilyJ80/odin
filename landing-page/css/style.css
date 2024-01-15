@@ -142,14 +142,21 @@ body {
 
 .action-box {
 	display: flex;
-	justify-content: start;
 	background-color: #3882f6;
 	color: white;
+	padding: 20px 190px;
+	border-radius: 10px;
+	gap: 20px;
 }
 
 .action-main {
 	font-weight: bold;
 	font-size: 24px;
+}
+
+.sign-up-box {
+	border: 1px solid white;
+	border-radius: 10px;
 }
 
 .sign-up-text {
