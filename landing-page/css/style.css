@@ -80,6 +80,7 @@ body {
 .information {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 100px;
 }
 
 .info-title {
@@ -108,4 +109,27 @@ body {
 	border: 2px solid #3882f6;
 	border-radius: 18px;
 	padding: 50%;
+}
+
+.quote-section {
+	display: flex;
+	background-color: #e5e7eb;
+}
+
+.quote-box {
+	display: flex;
+	padding: 15%;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.quote-text {
+	font-size: 36px;
+	font-weight: lighter;
+	font-style: italic;
+	color: #1f2937;
+}
+
+.quote-author {
+	align-self: flex-end;
 }
