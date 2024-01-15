@@ -14,10 +14,6 @@ function divide(a, b) {
 	return a / b;
 }
 
-let a;
-let b;
-let operator;
-
 function operate(operator, a, b) {
 	if (operator === "+") {
 		return add(a, b);
@@ -32,6 +28,10 @@ function operate(operator, a, b) {
 		return divide(a, b);
 	}
 }
+
+let a;
+let b;
+let operator;
 
 let display = document.querySelector(".display");
 let displayValue = 0;
