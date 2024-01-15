@@ -133,3 +133,25 @@ body {
 .quote-author {
 	align-self: flex-end;
 }
+
+.call-to-action-section {
+	display: flex;
+	justify-content: space-around;
+	padding: 15%;
+}
+
+.action-box {
+	display: flex;
+	justify-content: start;
+	background-color: #3882f6;
+	color: white;
+}
+
+.action-main {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.sign-up-text {
+	font-weight: bold;
+}
