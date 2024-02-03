@@ -23,9 +23,21 @@
 	width: 30%;
 	flex: 1 1 auto;
 
+	display: flex;
+
+	justify-content: center;
+	align-items: flex-end;
+	text-align: center;
+	color: #fff;
+
 	background: url(../assets/img/birmingham-museums-trust-chiFm1wGst8-unsplash.jpg);
 	background-size: cover;
 }
+
+a {
+	color: inherit;
+}
+
 
 .form-container {
 	width: 70%;
