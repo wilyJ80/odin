@@ -23,14 +23,40 @@
 	flex: 1 1 auto;
 
 	display: flex;
+	flex-direction: column;
 
 	justify-content: center;
-	align-items: flex-end;
 	text-align: center;
 	color: #fff;
 
 	background: url(../assets/img/birmingham-museums-trust-chiFm1wGst8-unsplash.jpg);
 	background-size: cover;
+}
+
+.logo-container {
+	display: flex;
+	gap: 5%;
+	justify-content: center;
+
+	margin-top: 15rem;
+
+	background: rgba(0, 0, 0, 0.3);
+}
+
+@font-face {
+	font-family: custom-font;
+	src: url(../assets/fonts/ProtestStrike-Regular.ttf);
+}
+
+.logo-name {
+	font-size: 4rem;
+	flex: 0 1 auto;
+
+	font-family: custom-font;
+}
+
+.copyright {
+	margin-top: auto;
 }
 
 a {
