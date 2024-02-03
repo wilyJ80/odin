@@ -24,6 +24,7 @@
 	flex: 1 1 auto;
 
 	background: url(../assets/img/birmingham-museums-trust-chiFm1wGst8-unsplash.jpg);
+	background-size: cover;
 }
 
 .form-container {
