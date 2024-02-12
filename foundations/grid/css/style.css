@@ -6,15 +6,21 @@
 
 .container {
 	display: grid;
-	color: #fff;
 	gap: 15px;
 	text-align: center;
-	grid-template: repeat(4, 32px) / repeat(2, 32px);
+	grid-template: repeat(4, 230px) / repeat(2, 230px);
 	grid-template-areas:
 		"header header header"
 		"sidebar nav nav"
 		"sidebar article article"
 		"sidebar footer footer"
+}
+
+.item {
+	border-radius: 10px;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 #header {
