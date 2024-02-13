@@ -7,7 +7,7 @@ function Book(title, author, pages) {
     this.read = false;
 
     this.info = function () {
-        allInfo = `${title} by ${author}, ${pages} pages, `;
+        allInfo = `${this.title} by ${this.author}, ${this.pages} pages, `;
 
         if (this.read) {
             allInfo += 'already read.';
@@ -24,8 +24,25 @@ function addBookToLibrary(book) {
 } 
 
 function displayBooks() {
+    const container = document.querySelector('.bookContainer');
     for (const book of myLibrary) {
-        console.log(book.info());
+        const card = document.createElement('div');
+        card.classList.add('card');
+        container.appendChild(card);
+
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
+        card.appendChild(cardBody);
+
+        const cardTitle = document.createElement('h5');
+        cardTitle.classList.add('card-title');
+        cardTitle.textContent = book.title;
+        cardBody.appendChild(cardTitle);
+
+        const cardText = document.createElement('p');
+        cardText.classList.add('card-text');
+        cardText.textContent = book.info();
+        cardBody.appendChild(cardText);
     }
 }
 
