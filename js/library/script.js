@@ -6,18 +6,25 @@ function Book(title, author, pages) {
     this.pages = pages;
     this.read = false;
 
-    function info() {
-        const info = `${title} by ${author}, ${pages} pages, `;
+    this.info = function () {
+        allInfo = `${title} by ${author}, ${pages} pages, `;
 
-        if (read) {
-            info += 'already read.';
+        if (this.read) {
+            allInfo += 'already read.';
         } else {
-            info += 'not read yet.';
+            allInfo += 'not read yet.';
         }
+
+        return allInfo;
     }
 }
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
 } 
+
+// test
+
+const myBook = new Book('myTitle', 'myAuthor', 300);
+console.log(myBook);
 
