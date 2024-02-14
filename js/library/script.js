@@ -25,11 +25,6 @@ function addBookToLibrary(book) {
     book.index = myLibrary.length - 1;
 }
 
-function removeBook(index) {
-    myLibrary.splice(index, 1);
-    updateCards();
-}
-
 function updateCards() {
     const container = document.querySelector('.bookContainer');
     container.innerHTML = '';
@@ -37,6 +32,11 @@ function updateCards() {
     for (const book of myLibrary) {
         addBookToLibrary(book);
     }
+}
+
+function removeBook(index) {
+    myLibrary.splice(index, 1);
+    updateCards();
 }
 
 const formTitle = document.querySelector('.my-form-title');
@@ -75,6 +75,10 @@ submitButton.addEventListener('click', () => {
     cardRemoveBtn.type = 'button';
     cardRemoveBtn.textContent = "REMOVE";
     cardBody.appendChild(cardRemoveBtn);
+
+    cardRemoveBtn.addEventListener('click', () => {
+        removeBook(createdBook.index);
+    });
 
     formTitle.value = '';
     formAuthor.value = '';
