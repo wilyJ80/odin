@@ -79,6 +79,12 @@ submitButton.addEventListener('click', () => {
     cardText.textContent = createdBook.info();
     cardBody.appendChild(cardText);
 
+    const cardRemoveBtn = document.createElement('button');
+    cardRemoveBtn.classList.add('btn', 'btn-danger');
+    cardRemoveBtn.type = 'button';
+    cardRemoveBtn.textContent = "REMOVE";
+    cardBody.appendChild(cardRemoveBtn);
+
     // Reset form fields
     formTitle.value = '';
     formAuthor.value = '';
@@ -86,18 +92,3 @@ submitButton.addEventListener('click', () => {
     formRead.checked = false;
 
 });
-
-// test
-
-const myBook = new Book('myTitle', 'myAuthor', 300, false);
-console.log(myBook);
-console.log(myBook.info());
-
-const myOtherBook = new Book('otherTitle', 'otherAuthor', 599, true);
-myOtherBook.read = true;
-
-addBookToLibrary(myBook);
-addBookToLibrary(myOtherBook);
-
-console.log(myLibrary);
-displayBooks();
