@@ -46,6 +46,8 @@ function displayBooks() {
     }
 }
 
+// form handling
+
 // test
 
 const myBook = new Book('myTitle', 'myAuthor', 300);
