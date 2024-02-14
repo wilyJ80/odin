@@ -5,6 +5,7 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.index;
 
     this.info = function () {
         allInfo = `${this.title} by ${this.author}, ${this.pages} pages, `;
@@ -21,6 +22,7 @@ function Book(title, author, pages, read) {
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
+    book.index = myLibrary.length - 1;
 }
 
 const formTitle = document.querySelector('.my-form-title');
@@ -66,3 +68,4 @@ submitButton.addEventListener('click', () => {
     formRead.checked = false;
 
 });
+
