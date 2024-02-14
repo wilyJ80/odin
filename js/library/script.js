@@ -56,7 +56,7 @@ const formRead = document.querySelector('.my-form-check')
 const submitButton = document.querySelector('.my-form-submit');
 
 submitButton.addEventListener('click', () => {
-    const createdBook = new Book(formTitle.value, formAuthor.value, formPages.value, formRead.value);
+    const createdBook = new Book(formTitle.value, formAuthor.value, formPages.value, formRead.checked);
     addBookToLibrary(createdBook);
 
     const container = document.querySelector('.bookContainer');
