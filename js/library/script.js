@@ -25,6 +25,20 @@ function addBookToLibrary(book) {
     book.index = myLibrary.length - 1;
 }
 
+function removeBook(index) {
+    myLibrary.splice(index, 1);
+    updateCards();
+}
+
+function updateCards() {
+    const container = document.querySelector('.bookContainer');
+    container.innerHTML = '';
+
+    for (const book of myLibrary) {
+        addBookToLibrary(book);
+    }
+}
+
 const formTitle = document.querySelector('.my-form-title');
 const formAuthor = document.querySelector('.my-form-author');
 const formPages = document.querySelector('.my-form-pages');
