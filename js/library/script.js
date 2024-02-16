@@ -19,10 +19,6 @@ function Book(title, author, pages, read) {
     }
 }
 
-function addBookToLibrary(book) {
-    myLibrary.push(book);
-}
-
 function updateCards() {
     const container = document.querySelector('.bookContainer');
     container.innerHTML = '';
@@ -81,7 +77,7 @@ const submitButton = document.querySelector('.my-form-submit');
 
 submitButton.addEventListener('click', () => {
     const createdBook = new Book(formTitle.value, formAuthor.value, formPages.value, formRead.checked);
-    addBookToLibrary(createdBook);
+    myLibrary.push(createdBook);
     addBookToDOM(createdBook);
 
     formTitle.value = '';
