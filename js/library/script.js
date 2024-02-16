@@ -5,7 +5,6 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
-    this.index;
 
     this.info = function() {
         let allInfo = `${this.title} by ${this.author}, ${this.pages} pages, `;
@@ -22,14 +21,13 @@ function Book(title, author, pages, read) {
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
-    book.index = myLibrary.length - 1;
 }
 
 function updateCards() {
     const container = document.querySelector('.bookContainer');
     container.innerHTML = '';
 
-    if (myLibrary.length) {
+    if (myLibrary.length > 0) {
         for (const book of myLibrary) {
             addBookToDOM(book);
         }
