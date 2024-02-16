@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -7,7 +7,7 @@ function Book(title, author, pages, read) {
     this.read = read;
     this.index;
 
-    this.info = function () {
+    this.info = function() {
         let allInfo = `${this.title} by ${this.author}, ${this.pages} pages, `;
 
         if (this.read) {
@@ -29,8 +29,10 @@ function updateCards() {
     const container = document.querySelector('.bookContainer');
     container.innerHTML = '';
 
-    for (const book of myLibrary) {
-        addBookToLibrary(book);
+    if (myLibrary.length) {
+        for (const book of myLibrary) {
+            addBookToDOM(book);
+        }
     }
 }
 
@@ -39,16 +41,7 @@ function removeBook(index) {
     updateCards();
 }
 
-const formTitle = document.querySelector('.my-form-title');
-const formAuthor = document.querySelector('.my-form-author');
-const formPages = document.querySelector('.my-form-pages');
-const formRead = document.querySelector('.my-form-check')
-
-const submitButton = document.querySelector('.my-form-submit');
-
-submitButton.addEventListener('click', () => {
-    const createdBook = new Book(formTitle.value, formAuthor.value, formPages.value, formRead.checked);
-    addBookToLibrary(createdBook);
+function addBookToDOM(createdBook) {
 
     const container = document.querySelector('.bookContainer');
 
@@ -79,11 +72,23 @@ submitButton.addEventListener('click', () => {
     cardRemoveBtn.addEventListener('click', () => {
         removeBook(createdBook.index);
     });
+}
+
+const formTitle = document.querySelector('.my-form-title');
+const formAuthor = document.querySelector('.my-form-author');
+const formPages = document.querySelector('.my-form-pages');
+const formRead = document.querySelector('.my-form-check')
+
+const submitButton = document.querySelector('.my-form-submit');
+
+submitButton.addEventListener('click', () => {
+    const createdBook = new Book(formTitle.value, formAuthor.value, formPages.value, formRead.checked);
+    addBookToLibrary(createdBook);
+    addBookToDOM(createdBook);
 
     formTitle.value = '';
     formAuthor.value = '';
     formPages.value = '';
     formRead.checked = false;
-
 });
 
