@@ -8,7 +8,7 @@ function Book(title, author, pages, read) {
     this.index;
 
     this.info = function () {
-        allInfo = `${this.title} by ${this.author}, ${this.pages} pages, `;
+        let allInfo = `${this.title} by ${this.author}, ${this.pages} pages, `;
 
         if (this.read) {
             allInfo += 'already read.';
