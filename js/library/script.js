@@ -35,6 +35,10 @@ function removeBook(index) {
     updateCards();
 }
 
+function changeReadStatus(book) {
+    book.read = !book.read;
+}
+
 function addBookToDOM(createdBook) {
 
     const container = document.querySelector('.bookContainer');
@@ -63,8 +67,19 @@ function addBookToDOM(createdBook) {
     cardRemoveBtn.textContent = "REMOVE";
     cardBody.appendChild(cardRemoveBtn);
 
+    const cardReadBtn = document.createElement('button');
+    cardReadBtn.classList.add('btn', 'btn-info');
+    cardReadBtn.type = 'button';
+    cardReadBtn.textContent = "CHANGE READ STATUS";
+    cardBody.appendChild(cardReadBtn);
+
     cardRemoveBtn.addEventListener('click', () => {
         removeBook(createdBook.index);
+    });
+
+    cardReadBtn.addEventListener('click', () => {
+        changeReadStatus(createdBook);
+        updateCards();
     });
 }
 
