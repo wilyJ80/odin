@@ -41,4 +41,5 @@ document.querySelectorAll(".number").forEach((button) => {
 		display.textContent += button.textContent;
 		displayValue += button.textContent;
 	});
-});
+}); 
+
