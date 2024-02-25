@@ -34,12 +34,12 @@ let b;
 let operator;
 
 let display = document.querySelector(".display");
-let displayValue = 0;
+let displayValue = "";
 
 document.querySelectorAll(".number").forEach((button) => {
 	button.addEventListener("click", () => {
 		display.textContent += button.textContent;
-		displayValue += button.textContent;
+		displayValue += parseInt(button.textContent, 10);
 	});
 }); 
 
