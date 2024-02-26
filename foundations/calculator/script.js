@@ -54,4 +54,9 @@ document.querySelector('.equals').addEventListener('click', () => {
 	}
 });
 
-
+document.querySelector('.clear').addEventListener('click', () => {
+	// get rid of everything
+	dataStack = [];
+	displayValue = 0;
+	display.textContent = "0";
+});
