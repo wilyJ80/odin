@@ -37,17 +37,21 @@ document.querySelectorAll('.operation').forEach((button) => {
 
 document.querySelector('.equals').addEventListener('click', () => {
 	// calculate with the rest of stack items
-	const numberChosen = parseFloat(displayValue);
-	dataStack.push(numberChosen);
+	if (dataStack.length > 0) {
+		const numberChosen = parseFloat(displayValue);
+		dataStack.push(numberChosen);
+	}
 
-	dataStack = calculate(dataStack);
-	// display top of data stack
-	display.textContent = dataStack[0];
-	// clear stack completely
-	dataStack = [];
-	// next inputs will start fresh in the display value
-	displayValue = 0;
-	operationEndFlag = true;
+	if (dataStack.length === 3) {
+		dataStack = calculate(dataStack);
+		// display top of data stack
+		display.textContent = dataStack[0];
+		// clear stack completely
+		dataStack = [];
+		// next inputs will start fresh in the display value
+		displayValue = 0;
+		operationEndFlag = true;
+	}
 });
 
 
