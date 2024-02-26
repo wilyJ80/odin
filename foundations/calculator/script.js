@@ -1,79 +1,53 @@
-function add(a, b) {
-	return parseInt(a) + parseInt(b);
-}
-
-function subtract(a, b) {
-	return a - b;
-}
-
-function multiply(a, b) {
-	return a * b;
-}
-
-function divide(a, b) {
-	return a / b;
-}
-
-function operate(operator, a, b) {
-	if (operator === "+") {
-		return add(a, b);
-	}
-	if (operator === "-") {
-		return subtract(a, b);
-	}
-	if (operator === "*") {
-		return multiply(a, b);
-	}
-	if (operator === "/") {
-		return divide(a, b);
-	}
-}
-
-function toPrefixNotation(arr) {
-	const tmp = arr[1];
-	arr[1] = arr[0];
-	arr[0] = tmp;
-}
-
-function prefixCalc(arr) {
-	if (arr.length == 2) {
-		toPrefixNotation(arr);
-	} else {
-		const result = operate(arr[0], arr[1], arr[2]);
-		arr.splice(0, 3, result);
-		
-	}
-}
+import { calculate } from "./operate.js";
 
 let display = document.querySelector(".display");
 let displayValue = "";
 let dataStack = [];
+let operationEndFlag;
 
 document.querySelectorAll(".number").forEach((button) => {
 	button.addEventListener("click", () => {
+
+		if (operationEndFlag) {
+			display.textContent = "0";
+			operationEndFlag = !operationEndFlag;
+		}
 		display.textContent += button.textContent;
-		displayValue += parseInt(button.textContent, 10);
+		displayValue += parseFloat(button.textContent, 10);
 	});
 }); 
 
 document.querySelectorAll('.operation').forEach((button) => {
 	button.addEventListener("click", () => {
 
-		dataStack.push(displayValue);
+		// operation and number chosen added to stack
+		const numberChosen = parseFloat(displayValue);
+		dataStack.push(numberChosen);
 		const operation = button.textContent;
 		dataStack.push(operation);
 
-		if (operation === '=') {
-			dataStack.pop();
-			prefixCalc(dataStack);
+		// perform calculation
+		dataStack = calculate(dataStack);
 
-			display.textContent = dataStack[0];
-			displayValue = 0;
-
-		} else {
-			prefixCalc(dataStack);
-			display.textContent = "0";
-			displayValue = 0;
-		}
+		// clean display
+		displayValue = 0;
+		display.textContent = "0";
 	});
+}); 
+
+document.querySelector('.equals').addEventListener('click', () => {
+	// calculate with the rest of stack items
+	const numberChosen = parseFloat(displayValue);
+	dataStack.push(numberChosen);
+
+	dataStack = calculate(dataStack);
+	// display top of data stack
+	display.textContent = dataStack[0];
+	// clear stack completely
+	dataStack = [];
+	// next inputs will start fresh in the display value
+	displayValue = 0;
+	operationEndFlag = true;
 });
+
+
