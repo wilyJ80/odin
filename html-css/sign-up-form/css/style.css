@@ -31,6 +31,7 @@
 
 	background: url(../assets/img/birmingham-museums-trust-chiFm1wGst8-unsplash.jpg);
 	background-size: cover;
+
 }
 
 .logo-container {
@@ -70,4 +71,12 @@ a {
 
 .content-container {
 	flex: 3 1 400px;
+}
+
+.form-header {
+	padding: 5rem;
+	font-weight: bold;
+	font-size: 3vh;
+	background-color: var(--main-col);
+	height: 100vh;
 }
