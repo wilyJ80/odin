@@ -101,3 +101,7 @@ a {
 .login-field {
 	width: 100%;
 }
+
+.login-label {
+	align-self: self-end;
+}
