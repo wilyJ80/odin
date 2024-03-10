@@ -71,6 +71,7 @@ a {
 
 .content-container {
 	flex: 3 1 400px;
+	height: 100%;
 }
 
 .form-container {
@@ -104,4 +105,22 @@ a {
 
 .login-label {
 	align-self: self-end;
+}
+
+.button-container {
+	padding: 2rem;
+	display: flex;
+	gap: 2rem;
+}
+
+#submit-button {
+	background-color: #b1a662;
+	border-radius: 1.5rem;
+	height: 100px;
+	width: 150px;
+	font-weight: bold;
+}
+
+.login-container {
+	align-self: center;
 }
