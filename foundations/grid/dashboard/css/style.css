@@ -1,0 +1,49 @@
+#dashboard {
+	height: 900px;
+}
+
+#nav-top,
+#nav-main {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+#search-bar,
+#status {
+	display: flex;
+	gap: 48px;
+	padding: 18px;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+#search-field {
+	flex: 1 1 auto;
+}
+
+#welcome {
+	display: grid;
+	grid-template-columns: 1fr 6fr;
+}
+
+#welcome-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#welcome,
+#welcome-buttons {
+	gap: 18px;
+	padding: 24px;
+}
+
+#welcome>img {
+	grid-row: 1 / span 2;
+}
+
+.nav-buttons {
+	padding: 18px;
+	text-align: center;
+	flex: 1 1 auto;
+}
