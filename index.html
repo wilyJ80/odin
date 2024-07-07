@@ -2,82 +2,166 @@
 <html lang="en">
 
 <head>
-	<title>Landing Page</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gracebook</title>
 	<link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-	<div class="hero">
-		<div class="header">
-			<div class="logo">Header Logo</div>
-			<div class="links">
-				<a href="">header link one</a>
-				<a href="">header link two</a>
-				<a href="">header link three</a>
+	<div id="main">
+		<div id="dashboard">
+			<div id="nav-top">
+				<div id="search-bar">
+					<img src="assets/search.svg" width="24" />
+					<input type="text" id="search-field">
+				</div>
+				<div id="status">
+					<img src="assets/notifications.svg" width="24" />
+					<img src="assets/person.svg" width="24" />
+					<h2>GRACEBOOK</h2>
+				</div>
+			</div>
+
+			<div id="nav-main">
+				<div id="welcome">
+					<img src="assets/person.svg" width="96" />
+					<div>Hi there,</div>
+					<h1>User</h1>
+				</div>
+				<div id="welcome-buttons">
+					<button class="nav-buttons">New Post</button>
+					<button class="nav-buttons">Log In</button>
+					<button class="nav-buttons">Sign Up</button>
+				</div>
 			</div>
 		</div>
 
-		<div class="welcome">
-			<div class="main-contents">
-				<div class="hero-main-text">This website is awesome</div>
-				<div class="hero-subtext">This website has some subtext that goes here under the main title. It's a
-					smaller font and the color is lower contrast</div>
-				<div class="sign-up">Sign up</div>
+	</div>
+	<div id="content">
+		<h3 id="projects">
+			Feed
+			<div id="card-grid">
+				<div class="card">
+					<div class="card-text">
+						<h3>Pray to God Today!</h3>
+						<p>Don't delay your precious time with the Lord!</p>
+					</div>
+					<div class="card-buttons">
+						<img src="assets/favorite.svg" width="32" />
+						<img src="assets/comment.svg" width="32" />
+						<img src="assets/share.svg" width="32" />
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-text">
+						<h3>Read the Bible Already?</h3>
+						<p>The Bible is food for the soul. Worried about not hearing God's voice? He calls you. All you
+							need is to answer Him!</p>
+					</div>
+					<div class="card-buttons">
+						<img src="assets/favorite.svg" width="32" />
+						<img src="assets/comment.svg" width="32" />
+						<img src="assets/share.svg" width="32" />
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-text">
+						<h3>How much is God important to You?</h3>
+						<p>Never forget to put God first, above all. Think on every and each problem in your life right
+							now: could any of those be greater than God Almighty?</p>
+					</div>
+					<div class="card-buttons">
+						<img src="assets/favorite.svg" width="32" />
+						<img src="assets/comment.svg" width="32" />
+						<img src="assets/share.svg" width="32" />
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-text">
+						<h3>Feeling Down? Hear me Out...</h3>
+						<p>Remember God is not only to be feared: He is a friend you can count on and talk with. Don't
+							be ashamed of Him: He looks after you. Open up your heart.</p>
+					</div>
+					<div class="card-buttons">
+						<img src="assets/favorite.svg" width="32" />
+						<img src="assets/comment.svg" width="32" />
+						<img src="assets/share.svg" width="32" />
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-text">
+						<h3>My new Worship Playlist</h3>
+						<p>The best form of art is the one that connects us to God. Save this playlist, made with love
+							for you.</p>
+					</div>
+					<div class="card-buttons">
+						<img src="assets/favorite.svg" width="32" />
+						<img src="assets/comment.svg" width="32" />
+						<img src="assets/share.svg" width="32" />
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-text">
+						<h3>My Bible Study Group News</h3>
+						<p>Don't miss this month's study. We will be going through Romans soon enough. More info in the
+							thread.</p>
+					</div>
+					<div class="card-buttons">
+						<img src="assets/favorite.svg" width="32" />
+						<img src="assets/comment.svg" width="32" />
+						<img src="assets/share.svg" width="32" />
+					</div>
+				</div>
 			</div>
-
-			<div class="image-container">This is a placeholder for an image</div>
+		</h3>
+		<div id="link-boxes">
+			<h3 id="announcements">
+				Announcements
+				<div id="announcement-grid">
+					<div class="announcement">
+						<h3>Site Maintenance</h3>
+						<p>Service will be temporarily unavailable at 8PM this Wednesday. We thank you for your
+							patience.</p>
+					</div>
+					<div class="announcement">
+						<h3>Hospital Donations</h3>
+						<p>Our campaign for donating to the cancer hospital currently nearest us is about to end. Don't
+							miss it!</p>
+					</div>
+					<div class="announcement">
+						<h3>Upcoming Baptism News</h3>
+						<p>We will be baptizing in the end of this month. We ask our brothers in Christ to join us in
+							our prayers for this upcoming special moment.</p>
+					</div>
+				</div>
+			</h3>
+			<h3 id="trending">
+				Trending
+				<div id="trending-profiles">
+					<div class="profile">
+						<div>@victorcss
+						</div>
+						<div>hacker guitarist</div>
+					</div>
+					<div class="profile">
+						<div>@danielim</div>
+						<div>nominate for best church leader prize 2024</div>
+					</div>
+					<div class="profile">
+						<div>@artur</div>
+						<div>lifting in the dark</div>
+					</div>
+					<div class="profile">
+						<div>@marcosanuch</div>
+						<div>worship leader</div>
+					</div>
+				</div>
+			</h3>
 		</div>
 	</div>
-
-	<div class="information">
-		<div class="info-title">Some random information.</div>
-		<div class="info-items">
-			<div class="info">
-				<div class="square"></div>
-				<div class="info-desc">this is some subtext under an illustration or image</div>
-			</div>
-			<div class="info">
-				<div class="square"></div>
-				<div class="info-desc">this is some subtext under an illustration or image</div>
-			</div>
-			<div class="info">
-				<div class="square"></div>
-				<div class="info-desc">this is some subtext under an illustration or image</div>
-			</div>
-			<div class="info">
-				<div class="square"></div>
-				<div class="info-desc">this is some subtext under an illustration or image</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="quote-section">
-		<div class="quote-box">
-			<div class="quote-text">This is an inspiring quote, or a testimonial from a customer. Maybe it's just
-				filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.
-			</div>
-			<div class="quote-author">- Thor, God of Thunder</div>
-		</div>
-	</div>
-
-	<div class="call-to-action-section">
-		<div class="action-box">
-			<div class="action-text">
-				<div class="action-main">Call to action! It's time!</div>
-				<div class="action-details">Sign up for our product by clicking that button right over there!</div>
-			</div>
-			<div class="sign-up-box">
-				<div class="sign-up-text">Sign up</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="footer">
-		<div class="footer-text">Copyright (c) 2024 Author. All Rights Reserved.</div>
-	</div>
+	<footer>GRACEBOOK Copyright (c) 2024 Victao. All Rights Reserved.</footer>
 
 </body>
 

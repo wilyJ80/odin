@@ -1,180 +1,157 @@
-* {
-	box-sizing: border-box;
-	font-family: roboto;
+:root {
+	--primary: #dde;
+	--secondary: #ffe;
+	--accent: #eeffff;
+}
+
+@font-face {
+	font-family: holyFont;
+	src: url(../assets/baskervville.ttf);
 }
 
 body {
 	margin: 0px;
-	padding: 0px;
+	font-family: holyFont;
 }
 
-.hero {
+#nav-top,
+#nav-main {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	background-color: var(--primary);
+}
+
+#search-bar,
+#status {
 	display: flex;
-	flex-direction: column;
-	background-color: #1f2937;
-	padding: 0px 10%;
+	gap: 48px;
+	padding: 18px;
+	justify-content: flex-end;
+	align-items: center;
 }
 
-.logo {
-	color: #f9faf8;
-	font-size: 24px;
-	font-weight: bolder;
+#search-field {
+	flex: 1 1 auto;
+	border-radius: 18px;
+	height: 18px;
 }
 
-.header {
+#welcome {
+	display: grid;
+	grid-template-columns: 1fr 6fr;
+}
+
+#welcome>img {
+	border: 1px solid #555;
+	border-radius: 8px;
+}
+
+#welcome-buttons {
 	display: flex;
-	justify-content: space-between;
-}
-
-.welcome {
-	display: flex;
-	margin: 8% 0;
-	gap: 5%;
-}
-
-.main-contents {
-	display: flex;
-	flex-direction: column;
-	flex: 1 1 0;
-}
-
-.image-container {
-	display: flex;
-	background-color: #e5e7eb;
-	flex: 1 1 0;
 	justify-content: center;
 	align-items: center;
-	color: white;
 }
 
-.hero-main-text {
-	font-size: 48px;
-	font-weight: bolder;
-	color: #f9faf8;
-	width: 50%;
+.nav-buttons {
+	font-family: holyFont;
 }
 
-.hero-subtext,
-.links a {
-	font-size: 18px;
-	color: #e5e7eb;
-	text-decoration: none;
-}
-
-.links {
-	display: flex;
+#welcome,
+#welcome-buttons {
 	gap: 18px;
+	padding: 24px;
 }
 
-.sign-up {
-	background-color: #3882f6;
-	border-radius: 4px;
-	max-width: 7em;
-	color: #fff;
-	font-weight: bold;
+#welcome>img {
+	grid-row: 1 / span 2;
+}
+
+.nav-buttons {
+	padding: 18px;
 	text-align: center;
-	padding: 2px;
-	margin: 9px 0;
+	flex: 1 1 auto;
 }
 
-.information {
+#projects {
+	padding: 18px;
+}
+
+#card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 12px;
+}
+
+.card {
+	padding: 18px;
+	border-radius: 8px;
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 100px;
+	background-color: var(--primary);
 }
 
-.info-title {
-	display: flex;
-	font-size: 36px;
-	font-weight: bolder;
-	color: #1f2937;
-	justify-content: center;
-	padding: 36px;
+.card-text {
+	flex: 1 1 auto;
 }
 
-.info-items {
-	display: flex;
-	margin: auto 20%;
-	gap: 56px;
-}
-
-.info {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	gap: 8px;
-}
-
-.square {
-	border: 2px solid #3882f6;
-	border-radius: 18px;
-	padding: 50%;
-}
-
-.quote-section {
-	display: flex;
-	background-color: #e5e7eb;
-}
-
-.quote-box {
-	display: flex;
-	padding: 15%;
-	flex-direction: column;
-	gap: 18px;
-}
-
-.quote-text {
-	font-size: 36px;
-	font-weight: lighter;
-	font-style: italic;
-	color: #1f2937;
-}
-
-.quote-author {
+.card-buttons {
 	align-self: flex-end;
 }
 
-.call-to-action-section {
-	display: flex;
-	justify-content: space-around;
-	padding: 10%;
+#content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	background-color: var(--secondary);
 }
 
-.action-box {
+#announcements {
+	padding: 18px;
+}
+
+#announcement-grid,
+#trending {
 	display: flex;
-	background-color: #3882f6;
-	color: white;
+	flex-direction: column;
+	gap: 12px;
+}
+
+#trending {
+	padding: 18px;
+}
+
+#trending-profiles {
+	display: flex;
+	gap: 12px;
+	flex-direction: column;
+}
+
+.announcement {
+	background-color: var(--primary);
+	padding: 8px;
+	border-radius: 8px;
+}
+
+.profile {
+	display: flex;
+	gap: 24px;
+	/* grid-template-columns: repeat(2, 1fr); */
+	/* grid-template-rows: repeat(2, 1fr); */
+	background-color: var(--accent);
+}
+
+.profile>div {
+	grid-column: 2;
+}
+
+.nav-buttons {
 	border-radius: 10px;
-	width: 65vw;
-	height: 8vw;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.action-main {
-	font-weight: bold;
-	font-size: 24px;
-}
-
-.sign-up-box {
-	display: flex;
-	border: 1px solid white;
-	border-radius: 10px;
-	justify-content: center;
-	align-items: center;
-	height: 30%;
-	width: 10vw;
-
-}
-
-.sign-up-text {
+	background-color: var(--accent);
+	border: none;
+	font-size: 12px;
 	font-weight: bold;
 }
 
-.footer {
+footer {
 	display: flex;
 	justify-content: center;
-	background-color: #1f2937;
-	color: white;
-	padding: 2vw;
 }
