@@ -1,5 +1,3 @@
-#dashboard {}
-
 #nav-top,
 #nav-main {
 	display: grid;
@@ -46,6 +44,10 @@
 	flex: 1 1 auto;
 }
 
+#projects {
+	padding: 18px;
+}
+
 #card-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -63,4 +65,28 @@
 
 .card-buttons {
 	align-self: flex-end;
+}
+
+#content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+#announcement-grid {
+	padding: 32px;
+}
+
+#trending {
+	padding: 32px;
+}
+
+.profile {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 12px;
+}
+
+.profile>div {
+	grid-column: 2;
 }
