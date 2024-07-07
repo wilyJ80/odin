@@ -1,7 +1,4 @@
-/* TODO: separate stylesheets for layout and components */
-#dashboard {
-	height: 900px;
-}
+#dashboard {}
 
 #nav-top,
 #nav-main {
@@ -47,4 +44,23 @@
 	padding: 18px;
 	text-align: center;
 	flex: 1 1 auto;
+}
+
+#card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+	padding: 18px;
+	display: flex;
+	flex-direction: column;
+}
+
+.card-text {
+	flex: 1 1 auto;
+}
+
+.card-buttons {
+	align-self: flex-end;
 }
