@@ -7,6 +7,7 @@ const game = createGame(player1, player2);
 const status = document.querySelector('#status');
 status.textContent = "Player 1 turn";
 
+// Map grid to array
 // Display message
 // Player turn
 // Check result
