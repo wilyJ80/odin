@@ -55,7 +55,6 @@ test('winning condition', () => {
 	expect(game.checkWin(player1.marker)).toBe(1);
 });
 
-// test.todo('draw');
 test('draw', () => {
 	const game = createGame(player1, player2);
 	game.player1Turn(0, 0);
@@ -70,4 +69,4 @@ test('draw', () => {
 	expect(game.checkWin()).toBe(0);
 });
 
-test.todo('test full game loop');
+// test.todo('test full game loop');

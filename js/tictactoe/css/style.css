@@ -1,0 +1,44 @@
+:root {
+	--primary: #3f8faf;
+	--accent: #2fb33f;
+	--bg: #00adcd;
+}
+
+body {
+	margin: 0px;
+}
+
+#game {
+	height: 100vh;
+	padding: 18px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 150px;
+	background-color: var(--bg);
+}
+
+#status {
+	width: 70vw;
+	height: 120px;
+	background-color: var(--primary);
+	border: 1px solid #ddf;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+}
+
+#board {
+	width: 15rem;
+	background-color: var(--primary);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.positions {
+	height: 5rem;
+	border: 1px solid #ddf;
+	border-radius: 5px;
+}
