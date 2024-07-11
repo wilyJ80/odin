@@ -39,7 +39,7 @@ export function createGame(player1, player2) {
 
 	];
 
-	const checkWin = () => {
+	/* const checkWin = () => {
 		if (winningCombinations.some(combination =>
 			combination.every(([x, y]) => positions[x][y] === 'O'))) {
 			return 1;
@@ -50,6 +50,12 @@ export function createGame(player1, player2) {
 			return 0;
 		}
 	}
+	*/
+	const checkWin = (marker) => {
+		return winningCombinations.some(combination =>
+			combination.every(([x, y]) => positions[x][y] === marker)
+		);
+	};
 
 	return { player1Turn, player2Turn, positions, checkWin };
 }
