@@ -1,6 +1,8 @@
-import createHome from './home.js'
-import createAbout from './about.js';
-import createMenu from './menu.js';
+import createHome from './home/home.js'
+import createAbout from './about/about.js';
+import createMenu from './menu/menu.js';
+
+import './style.css';
 
 createHome();
 const tabs = document.querySelectorAll('.nav-button');
