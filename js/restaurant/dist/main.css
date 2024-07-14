@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'RistoranteFont';
+	src: url(ae8ab5bac40a0768456d.ttf);
+}
+
+:root {
+	font-family: 'RistoranteFont';
+}
+
+body {
+	height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	place-items: center;
+}
+
+body,
+.nav-button {
+	margin: 0 auto;
+	max-width: 650px;
+	color: firebrick;
+	font-size: 18px;
+}
+
+nav {
+	border: 1px solid firebrick;
+}
+
+.nav-button {
+	font-family: 'RistoranteFont';
+	border: none;
+}
+
+.nav-button:hover {
+	background-color: white;
+}
+
+nav,
+.nav-button {
+	background-color: antiquewhite;
+}
+
+body {
+	background-color: tomato;
+}
+
+#content {
+	background-color: antiquewhite;
+	line-height: 1.6;
+	padding: 8px;
+}
+
+dl,
+#content {
+	border: 8px double #000;
+}
+
