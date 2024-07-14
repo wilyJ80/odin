@@ -15,14 +15,22 @@ const config = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        clean: true,
+    },
+    optimization: {
+        runtimeChunk: 'single',
     },
     devServer: {
         open: true,
         host: 'localhost',
+        watchFiles: ['index.html'],
+        static: './dist',
+        hot: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html',
+            filename: 'index.html',
         }),
 
         // Add your plugins here
@@ -36,7 +44,7 @@ const config = {
             },
             {
                 test: /\.css$/i,
-                use: [stylesHandler,'css-loader'],
+                use: [stylesHandler, 'css-loader'],
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
@@ -52,12 +60,13 @@ const config = {
 module.exports = () => {
     if (isProduction) {
         config.mode = 'production';
-        
+
         config.plugins.push(new MiniCssExtractPlugin());
-        
-        
+
+
     } else {
-        config.mode = 'development';
+        config.mode = 'development',
+            config.target = 'web';
     }
     return config;
 };
