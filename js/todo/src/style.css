@@ -1,0 +1,16 @@
+body {
+	margin: 0;
+	height: 100vh;
+	background-color: var(--secondary);
+}
+
+:root {
+	--primary: #e0fef1;
+	--secondary: #efedfd;
+}
+
+nav {
+	background-color: var(--primary);
+	font-size: 3rem;
+	padding: 2rem;
+}
