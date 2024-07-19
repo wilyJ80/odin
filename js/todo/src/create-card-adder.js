@@ -25,7 +25,6 @@ export function createCardAdder(main) {
         input.placeholder = 'Your TODO name';
 
         nameLabel.appendChild(input);
-        input.classList.add('grow');
       })(nameLabel);
 
       const activitiesForm = document.createElement('label');
