@@ -45,8 +45,20 @@ export function createCardAdder(main) {
         activitiesForm.appendChild(activitiesLabel);
       })(activitiesForm);
 
+      const cardActions = document.createElement('div');
+      cardActions.classList.add('card-actions', 'justify-end');
+
+      (function(cardActions) {
+        const createBtn = document.createElement('button');
+        createBtn.classList.add('btn', 'btn-primary');
+        createBtn.textContent = 'Add';
+
+        cardActions.appendChild(createBtn);
+      })(cardActions);
+
       cardBody.appendChild(nameLabel);
       cardBody.appendChild(activitiesForm);
+      cardBody.appendChild(cardActions);
     })(cardBody);
 
     card.appendChild(cardBody);
