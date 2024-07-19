@@ -1,4 +1,6 @@
 export function createCardAdder(main) {
+  let cardAdderBtn;
+
   const card = document.createElement('div');
   card.classList.add('card', 'bg-base-100', 'w-fit', 'shadow-xl');
 
@@ -48,12 +50,13 @@ export function createCardAdder(main) {
       const cardActions = document.createElement('div');
       cardActions.classList.add('card-actions', 'justify-end');
 
-      (function(cardActions) {
+      cardAdderBtn = (function(cardActions) {
         const createBtn = document.createElement('button');
         createBtn.classList.add('btn', 'btn-primary');
         createBtn.textContent = 'Add';
 
         cardActions.appendChild(createBtn);
+        return createBtn;
       })(cardActions);
 
       cardBody.appendChild(nameLabel);
@@ -65,4 +68,5 @@ export function createCardAdder(main) {
   })(card);
 
   main.appendChild(card);
+  return cardAdderBtn;
 }

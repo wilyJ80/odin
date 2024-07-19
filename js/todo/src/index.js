@@ -9,5 +9,9 @@ const footerP = document.querySelector('footer aside p');
 
   yearGenerate(footerP);
 
-  createCardAdder(main);
+  const createBtn = createCardAdder(main);
+
+  createBtn.addEventListener('click', () => {
+    console.log("Woah");
+  });
 })();
