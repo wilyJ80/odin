@@ -10,11 +10,15 @@ const footerAsideP = document.querySelector('footer aside p');
 
   yearGenerate(footerAsideP);
 
-  const createBtn = createCardAdder(main);
+  const cardAdder = createCardAdder(main);
 
-  createBtn.button.addEventListener('click', () => {
-    const values = createBtn.getInputValues();
-    createTodoCard(main, values.name, values.activities);
-    createBtn.resetForm();
+  cardAdder.button.addEventListener('click', () => {
+    const values = cardAdder.getInputValues();
+    cardAdder.resetForm();
+
+    const todoCard = createTodoCard(main, values.name, values.activities);
+    todoCard.button.addEventListener('click', () => {
+      todoCard.card.remove();
+    });
   });
 })();

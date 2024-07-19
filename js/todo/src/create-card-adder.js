@@ -3,7 +3,7 @@ export function createCardAdder(main) {
   let input, activitiesTextArea;
 
   const card = document.createElement('div');
-  card.classList.add('card', 'bg-base-100', 'w-fit', 'shadow-xl');
+  card.classList.add('card', 'bg-base-100', 'shadow-xl');
 
   (function(card) {
     const cardBody = document.createElement('div');
@@ -73,13 +73,13 @@ export function createCardAdder(main) {
 
   return {
     button: cardAdderBtn,
-    getInputValues: function() {
+    getInputValues: () => {
       return {
         name: input.value,
         activities: activitiesTextArea.value
       };
     },
-    resetForm: function() {
+    resetForm: () => {
       input.value = '';
       activitiesTextArea.value = '';
     }
