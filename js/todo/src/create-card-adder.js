@@ -1,3 +1,3 @@
-export default function createCardAdder() {
+export function createCardAdder() {
 
 }

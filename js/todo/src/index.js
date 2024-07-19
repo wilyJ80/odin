@@ -1,9 +1,11 @@
 import './style.css';
 
-import createCardAdder from './create-card-adder.js';
-import yearGenerate from './year-generate.js';
-
 const footerP = document.querySelector('footer aside p');
-yearGenerate(footerP);
 
-createCardAdder();
+const init = (async function() {
+  const { createCardAdder } = await import('./create-card-adder');
+  const { yearGenerate } = await import('./year-generate');
+
+  yearGenerate(footerP);
+  createCardAdder();
+})()
