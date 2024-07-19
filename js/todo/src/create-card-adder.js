@@ -59,9 +59,10 @@ export function createCardAdder(main) {
         return createBtn;
       })(cardActions);
 
-      cardBody.appendChild(nameLabel);
-      cardBody.appendChild(activitiesForm);
       cardBody.appendChild(cardActions);
+      cardBody.insertBefore(cardActions, null);
+      cardBody.insertBefore(activitiesForm, cardActions);
+      cardBody.insertBefore(nameLabel, activitiesForm);
     })(cardBody);
 
     card.appendChild(cardBody);
