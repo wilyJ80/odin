@@ -1,5 +1,6 @@
 export function createCardAdder(main) {
   let cardAdderBtn;
+  let input, activitiesTextArea;
 
   const card = document.createElement('div');
   card.classList.add('card', 'bg-base-100', 'w-fit', 'shadow-xl');
@@ -22,7 +23,7 @@ export function createCardAdder(main) {
       nameLabel.classList.add('input', 'input-bordered', 'flex', 'items-center', 'gap-2');
 
       (function(nameLabel) {
-        const input = document.createElement('input');
+        input = document.createElement('input');
         input.type = 'text';
         input.placeholder = 'Your TODO name';
 
@@ -37,7 +38,7 @@ export function createCardAdder(main) {
         activitiesLabel.classList.add('label', 'p-0');
 
         (function(activitiesLabel) {
-          const activitiesTextArea = document.createElement('textarea');
+          activitiesTextArea = document.createElement('textarea');
           activitiesTextArea.classList.add('textarea', 'textarea-bordered', 'h-24', 'w-full');
           activitiesTextArea.placeholder = 'What do you want to do?';
 
@@ -69,5 +70,18 @@ export function createCardAdder(main) {
   })(card);
 
   main.appendChild(card);
-  return cardAdderBtn;
+
+  return {
+    button: cardAdderBtn,
+    getInputValues: function() {
+      return {
+        name: input.value,
+        activities: activitiesTextArea.value
+      };
+    },
+    resetForm: function() {
+      input.value = '';
+      activitiesTextArea.value = '';
+    }
+  };
 }
