@@ -2,7 +2,7 @@ export function createTodoCard(main, name, activities) {
   let cardRemoveBtn;
 
   const card = document.createElement('div');
-  card.classList.add('card', 'bg-primary', 'w-fit', 'shadow-xl', 'text-primary-content', 'h-auto', 'w-auto');
+  card.classList.add('card', 'bg-primary', 'w-fit', 'shadow-xl', 'text-primary-content', 'h-full', 'w-full');
 
   (function(card) {
     const cardBody = document.createElement('div');
