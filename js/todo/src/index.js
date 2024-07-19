@@ -8,4 +8,4 @@ const init = (async function() {
 
   yearGenerate(footerP);
   createCardAdder();
-})()
+})();
