@@ -1,41 +1,7 @@
-# TODO: travels checklist
+Built with webpack
 
-```json
-{
-    "countries": [
-        "name": "",
-        "finished": false,
-        "cities": [
-            {
-                "city": "",
-                "activities": "",
-                "date": "",
-                "completed": false
-            }
-        ]
-    ]
-}
-```
+- Build with `npm install`
 
-# UI:
+- Start dev server with `npm run serve`
 
-| Project | Add |
-| -------------- | --------------- |
-| ... | + |
-
-| Checkbox   | Project name    |
-|--------------- | --------------- |
-| City   | ...   |
-| Activities   | ...   |
-| Date   | ...   |
-| Completed   | ...   |
-| ... | ... |
-| EDIT | ... |
-| - | ... |
-| + | ... |
-
-## Step 1: dynamic todos in in-memory JSON object
-
-- Load default item
-
-## Step 2: todos in localStorage
+- Build production files with `npm run build`
