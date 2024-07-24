@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --primary-color: #070a5a;
+  --secondary-color: #aba2f2;
+  --accent: #822;
+  --text: #eff;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.nav-button {
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 0.2rem;
+  padding: 0.6rem;
+  background-color: var(--secondary-color);
+  color: var(--text);
+  font-weight: bold;
+}
