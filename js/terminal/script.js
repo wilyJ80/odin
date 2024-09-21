@@ -6,6 +6,7 @@ const isDigitRegex = /\S/;
 const isSpaceRegex = /\s/;
 const backspaceRegex = /Backspace/;
 
+// TODO: Remove console logs after next stable version
 textArea.addEventListener("keydown", (event) => {
 	event.preventDefault();
 
@@ -14,25 +15,23 @@ textArea.addEventListener("keydown", (event) => {
 		textArea.value += '\n' + buffer + '\n';
 		buffer = '';
 		console.log('*** buffer clean');
-		textArea.scrollTop = textArea.scrollHeight;
 
 	} else if (isSpaceRegex.test(event.key)) {
 		buffer += ' ';
 		textArea.value += ' ';
 		console.log(buffer);
-		textArea.scrollTop = textArea.scrollHeight;
 
 	} else if (backspaceRegex.test(event.key)) {
 		buffer = buffer.slice(0, -1);
 		textArea.value = textArea.value.slice(0, -1);
 		console.log(buffer);
-		textArea.scrollTop = textArea.scrollHeight;
 
 	} else if (isDigitRegex.test(event.key) && event.key.length === 1) {
 		buffer += event.key;
 		textArea.value += event.key;
 		console.log(buffer);
-		textArea.scrollTop = textArea.scrollHeight;
 	}
+
+	textArea.scrollTop = textArea.scrollHeight;
 });
 
