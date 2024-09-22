@@ -1,5 +1,5 @@
 import './App.css';
 
 export function Name() {
-  <h2>My name is Victor...</h2>;
+  return <h2>My name is Victor...</h2>;
 }
