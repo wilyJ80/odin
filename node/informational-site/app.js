@@ -5,20 +5,20 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3222;
 
+app.use(express.static(path.join(__dirname, 'views')));
+
+/*
+ * In case you want to use a template engine
+ * app.set('views', path.join(__dirname, 'views'));
+ * app.set('view engine', 'ejs');
+	*/
+
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, './index.html'));
-});
-
-app.get('/about', (req, res) => {
-	res.sendFile(path.join(__dirname, './about.html'));
-});
-
-app.get('/contact-me', (req, res) => {
-	res.sendFile(path.join(__dirname, './contact-me.html'));
+	res.sendFile(path.join(__dirname, 'views', './index.html'));
 });
 
 app.use((req, res) => {
-	res.status(404).sendFile(path.join(__dirname, './404.html'));
+	res.status(404).sendFile(path.join(__dirname, 'views', './404.html'));
 })
 
 app.listen(PORT, () => {
