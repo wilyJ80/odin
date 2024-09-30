@@ -9,7 +9,7 @@ describe('main endpoint test', () => {
 			.query({ sort: 'date', direction: 'ascending' })
 			.expect(200);
 
-		expect(res.text).toContain('Params: victor');
-		expect(res.text).toContain('Query: {"sort":"date","direction":"ascending"}')
+		expect(res.text).toMatch('Params: victor');
+		expect(res.text).toMatch('Query: {"sort":"date","direction":"ascending"}')
 	});
 });
