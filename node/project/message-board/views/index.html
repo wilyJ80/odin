@@ -9,18 +9,24 @@
 
 <body>
 	<h1>Welcome to index</h1>
+	<a href="<%= routes.newMessage %>">Add your message</a>
 	<% messages.forEach((message)=> { %>
-		<ul>
-			<li>
-				<%= message.text %>
-			</li>
-			<li>
-				<%= message.user %>
-			</li>
-			<li>
-				<%= message.added %>
-			</li>
-		</ul>
+		<form method="post" action="/details">
+			<ul>
+				<li>
+					<%= message.text %>
+				</li>
+				<li>
+					<%= message.user %>
+				</li>
+				<li>
+					<%= message.added %>
+				</li>
+				<li>
+					<a name="data" href="<%= routes.messageDetails %>">Details</a>
+				</li>
+			</ul>
+		</form>
 		<% }); %>
 </body>
 

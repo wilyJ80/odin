@@ -3,6 +3,8 @@ import ejs from "ejs";
 
 export const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+
 app.set('view engine', 'ejs');
 app.engine('html', ejs.renderFile);
 
@@ -19,6 +21,11 @@ const messages = [
 	}
 ];
 
+app.locals.routes = {
+	newMessage: '/new',
+	messageDetails: '/details'
+};
+
 app.get('/', (req, res) => {
 	res.render('index.html', {
 		messages: messages
@@ -26,5 +33,18 @@ app.get('/', (req, res) => {
 });
 
 app.get('/new', (req, res) => {
-	res.render('form.html');
+	res.render('form.html', {
+		messages: messages
+	});
+});
+
+app.post('/new', (req, res) => {
+	messages.push({ text: req.body.text, user: req.body.user, added: new Date() });
+	res.redirect("/");
+});
+
+app.post('/details', (req, res) => {
+	res.render('details.html', {
+		text: req.body.text, text: req.body.user, text: req.body.added
+	});
 });
