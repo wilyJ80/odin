@@ -11,7 +11,7 @@
 	<h1>Welcome to index</h1>
 	<a href="<%= routes.newMessage %>">Add your message</a>
 	<% messages.forEach((message)=> { %>
-		<form method="post" action="/details">
+		<form method="post" action="<%= routes.messageDetails %>">
 			<ul>
 				<li>
 					<%= message.text %>
@@ -23,7 +23,10 @@
 					<%= message.added %>
 				</li>
 				<li>
-					<a name="data" href="<%= routes.messageDetails %>">Details</a>
+					<input type="hidden" name="text" value="<%= message.text %>">
+					<input type="hidden" name="user" value="<%= message.user %>">
+					<input type="hidden" name="added" value="<%= message.added %>">
+					<button>Details</button>
 				</li>
 			</ul>
 		</form>

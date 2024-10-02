@@ -45,6 +45,6 @@ app.post('/new', (req, res) => {
 
 app.post('/details', (req, res) => {
 	res.render('details.html', {
-		text: req.body.text, text: req.body.user, text: req.body.added
+		text: req.body.text, user: req.body.user, added: req.body.added
 	});
 });
