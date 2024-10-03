@@ -7,6 +7,8 @@ export const newMessagePage = (req, res) => {
 };
 
 export const addNewMessage = (req, res) => {
-	messages.push({ text: req.body.text, user: req.body.user, added: new Date() });
+	const newId = messages.length > 0 ? messages[messages.length - 1].id + 1 : 0;
+	const newMessage = { id: newId, text: req.body.text, user: req.body.user, added: new Date() };
+	messages.push(newMessage);
 	res.redirect("/");
 };
