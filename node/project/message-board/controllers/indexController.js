@@ -1,18 +1,18 @@
-// TODO: Add JSON persistence
-export const messages = [
-	{
-		id: 0,
-		text: 'Hi there!',
-		user: 'Victor',
-		added: new Date()
-	},
-	{
-		id: 1,
-		text: 'This is a test',
-		user: 'Victor again',
-		added: new Date()
+import fs from "node:fs/promises";
+import path from "node:path";
+
+/* No direct import for ESM on Node at the time of writing ;-; */
+export async function loadMessages() {
+	try {
+		const filePath = path.resolve(import.meta.dirname, '../db/initial-schema.json');
+		const data = await fs.readFile(filePath);
+		return JSON.parse(data);
+	} catch (err) {
+		console.error(`Error loading initial schema: ${err}`);
 	}
-];
+}
+
+export const messages = await loadMessages();
 
 export const routes = {
 	newMessage: '/new',
