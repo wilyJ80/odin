@@ -4,32 +4,27 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Message Index</title>
 </head>
 
 <body>
 	<h1>Welcome to index</h1>
 	<a href="<%= routes.newMessage %>">Add your message</a>
 	<% messages.forEach((message)=> { %>
-		<form method="post" action="<%= routes.messageDetails %>">
-			<ul>
-				<li>
-					<%= message.text %>
-				</li>
-				<li>
-					<%= message.user %>
-				</li>
-				<li>
-					<%= message.added %>
-				</li>
-				<li>
-					<input type="hidden" name="text" value="<%= message.text %>">
-					<input type="hidden" name="user" value="<%= message.user %>">
-					<input type="hidden" name="added" value="<%= message.added %>">
-					<button>Details</button>
-				</li>
-			</ul>
-		</form>
+		<ul>
+			<li>
+				<%= message.text %>
+			</li>
+			<li>
+				<%= message.user %>
+			</li>
+			<li>
+				<%= message.added %>
+			</li>
+			<li>
+				<a href="<%= routes.messageDetails %>/<%= message.id %>">Details</a>
+			</li>
+		</ul>
 		<% }); %>
 </body>
 
