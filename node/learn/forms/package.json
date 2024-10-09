@@ -4,7 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node --test --watch"
+    "test": "node --test --watch",
+    "server": "node --watch ./server.js",
+    "typecheck": "tsc --allowJs --checkJs --noEmit ./controllers/*.js routes/*.js ./storages/*.js *.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
     "express-validator": "^7.2.0"
   },
   "devDependencies": {
-    "supertest": "^7.0.0"
+    "supertest": "^7.0.0",
+    "typescript": "^5.6.3"
   }
 }

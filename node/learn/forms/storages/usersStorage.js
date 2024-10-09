@@ -25,6 +25,11 @@ class UsersStorage {
 	deleteUser(id) {
 		delete this.storage[id];
 	}
+
+	deleteAllUsers() {
+		this.storage = {};
+		this.id = 0;
+	}
 }
 
 export const usersStorage = new UsersStorage();

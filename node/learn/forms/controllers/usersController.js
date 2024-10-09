@@ -1,7 +1,6 @@
 import { usersStorage } from "../storages/usersStorage.js";
 
 class UsersController {
-
 	/**
 	 * @param {import('express').Request} req 
 	 * @param {import('express').Response} res 

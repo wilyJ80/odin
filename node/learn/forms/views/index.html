@@ -16,14 +16,16 @@
 	</h1>
 
 	<ul>
-		<% if (locals.users) { %>
+		<% if (locals.users.length> 0) { %>
 			<% users.forEach(user=> { %>
 				<li>
 					ID: <%= user.id %>, Name: <%= user.firstName %>
 							<%= user.lastName %>
 				</li>
 				<% }); %>
-					<% } %>
+					<% } else { %>
+						<p>No users available</p>
+						<% } %>
 	</ul>
 	<a href="/create">Create a user</a>
 
