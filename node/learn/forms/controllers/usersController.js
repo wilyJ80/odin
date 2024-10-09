@@ -1,6 +1,20 @@
 import { usersStorage } from "../storages/usersStorage.js";
+import { body, validationResult } from "express-validator";
 
 class UsersController {
+	constructor() {
+		this.alphaErr = 'must only contain letters.';
+		this.lengthErr = 'must be between 1 and 10 characters.';
+		this.validateUser = [
+			body('firstName').trim()
+				.isAlpha().withMessage(`First name ${this.alphaErr}`)
+				.isLength(({ min: 1, max: 10 })).withMessage(`First name ${this.lengthErr}`),
+			body('lastName').trim()
+				.isAlpha().withMessage(`Last name ${this.alphaErr}`)
+				.isLength({ min: 1, max: 10 }).withMessage(`Last name ${this.lengthErr}`)
+		];
+	}
+
 	/**
 	 * @param {import('express').Request} req 
 	 * @param {import('express').Response} res 
