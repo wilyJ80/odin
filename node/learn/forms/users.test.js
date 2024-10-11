@@ -15,7 +15,7 @@ describe('User tests', () => {
 
 	// post user, return updated
 	it('should create an user and update', async () => {
-		usersStorage.addUser({ id: 0, firstName: 'Victor', lastName: 'Hugo' });
+		usersStorage.addUser({ firstName: 'Victor', lastName: 'Hugo' });
 		const storage = usersStorage.getUsers();
 		const result = [{ id: 0, firstName: 'Victor', lastName: 'Hugo' }];
 		assert.deepEqual(storage, result);
