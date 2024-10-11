@@ -55,13 +55,62 @@ class UsersController {
 		usersStorage.addUser({ firstName, lastName });
 		res.redirect('/');
 	}
+
+	/**
+	 * @param {import('express').Request} req 
+	 * @param {import('express').Response} res 
+	*/
+	usersUpdateGet(req, res) {
+		const user = usersStorage.getUser(req.params.id);
+		res.render("updateUser.html", {
+			title: "Update user",
+			user: user
+		});
+	}
+
+	/**
+	 * @param {import('express').Request} req 
+	 * @param {import('express').Response} res 
+	*/
+	usersUpdatePost(req, res) {
+		const user = usersStorage.getUser(req.params.id);
+		const errors = validationResult(req);
+		if (!errors.isEmpty()) {
+			return res.status(400).render('updateUser.html', {
+				title: "Update user",
+				user: user,
+				errors: errors.array(),
+			});
+		}
+
+		const { firstName, lastName } = req.body;
+		usersStorage.updateUser(req.params.id, { firstName, lastName });
+		res.redirect("/");
+	}
+
+	/**
+	 * @param {import('express').Request} req 
+	 * @param {import('express').Response} res 
+	*/
+	usersDeletePost(req, res) {
+		usersStorage.deleteUser(req.params.id);
+		res.redirect('/');
+	}
 };
 
 const usersController = new UsersController();
 
 export const usersListGet = usersController.usersListGet.bind(usersController);
 export const usersCreateGet = usersController.usersCreateGet.bind(usersController);
+export const usersUpdateGet = usersController.usersUpdateGet.bind(usersController);
 export const usersCreatePost = [
 	usersController.validateUser(),
 	usersController.usersCreatePost.bind(usersController)
 ];
+
+export const usersUpdatePost = [
+	usersController.validateUser(),
+	usersController.usersUpdatePost.bind(usersController)
+];
+
+export const usersDeletePost = usersController.usersDeletePost.bind(usersController);
