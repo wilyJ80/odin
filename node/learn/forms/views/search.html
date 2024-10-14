@@ -14,13 +14,11 @@
 		<%= title %>
 	</h1>
 
-	<form action="/search" method="get">
-		<label for="query">Search for user:</label>
-		<input type="text" name="search" id="query">
-	</form>
+	<p>Searched for: <%= searchQuery %>
+	</p>
 
 	<ul>
-		<% if (locals.users.length> 0) { %>
+		<% if (users.length> 0) { %>
 			<% users.forEach(user=> { %>
 				<li>
 					ID: <%= user.id %>, Name: <%= user.firstName %>
@@ -36,7 +34,7 @@
 						<p>No users available</p>
 						<% } %>
 	</ul>
-	<a href="/create">Create a user</a>
+	<a href="/">Back to Index</a>
 
 </body>
 

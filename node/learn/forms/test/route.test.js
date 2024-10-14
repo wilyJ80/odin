@@ -5,7 +5,7 @@ import { app } from "../app.js";
 describe('GET /', () => {
 	it('responds with 200', async () => {
 		/**
-		 * @type {import('supertest').SuperTest}
+		 * @type {import('supertest').Response}
 		 */
 		const res = await supertest(app)
 			.get('/')
@@ -17,7 +17,7 @@ describe('GET /', () => {
 describe('GET /create', () => {
 	it('responds with 200', async () => {
 		/**
-		 * @type {import('supertest').SuperTest}
+		 * @type {import('supertest').Response}
 		 */
 		const res = await supertest(app)
 			.get('/create')
@@ -29,7 +29,7 @@ describe('GET /create', () => {
 describe('POST /create without validation', () => {
 	it('responds with 400 Bad Request', async () => {
 		/**
-		 * @type {import('supertest').SuperTest}
+		 * @type {import('supertest').Response}
 		 */
 		const res = await supertest(app)
 			.post('/create')
@@ -40,5 +40,16 @@ describe('POST /create without validation', () => {
 describe('POST /create with validation', () => {
 	it('returns 302', { todo: true }, async () => {
 
+	});
+});
+
+describe('GET /search', () => {
+	it('responds with 200', async () => {
+		/**
+		 * @type {import('supertest').Response}
+		 */
+		const res = await supertest(app)
+			.get('/search')
+			.expect(200);
 	});
 });
