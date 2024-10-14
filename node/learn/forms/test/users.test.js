@@ -1,6 +1,6 @@
 import { describe, it, before } from "node:test";
 import assert from "node:assert/strict";
-import { usersStorage } from "./storages/usersStorage.js";
+import { usersStorage } from "../storages/usersStorage.js";
 
 describe('User tests', () => {
 	before(() => {
@@ -15,9 +15,9 @@ describe('User tests', () => {
 
 	// post user, return updated
 	it('should create an user and update', async () => {
-		usersStorage.addUser({ firstName: 'Victor', lastName: 'Hugo' });
+		usersStorage.addUser({ firstName: 'Victor', lastName: 'Hugo', email: 'abjurandam@gmail.com', age: '18', bio: 'Here is a bio' });
 		const storage = usersStorage.getUsers();
-		const result = [{ id: 0, firstName: 'Victor', lastName: 'Hugo' }];
+		const result = [{ id: 0, firstName: 'Victor', lastName: 'Hugo', email: 'abjurandam@gmail.com', age: '18', bio: 'Here is a bio' }];
 		assert.deepEqual(storage, result);
 	});
 });

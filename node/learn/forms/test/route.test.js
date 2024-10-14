@@ -1,6 +1,6 @@
 import supertest from "supertest";
 import { describe, it } from "node:test";
-import { app } from "./app.js";
+import { app } from "../app.js";
 
 describe('GET /', () => {
 	it('responds with 200', async () => {
