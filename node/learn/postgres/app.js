@@ -8,6 +8,6 @@ import { usernameRouter } from "./routes/usernameRouter.js";
 export const app = express();
 
 app.set('view engine', 'ejs');
-app.engine('ejs', ejs.renderFile);
+app.engine('html', ejs.renderFile);
 app.use(express.urlencoded({ extended: true }));
 app.use('/', usernameRouter);
