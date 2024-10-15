@@ -1,4 +1,4 @@
-import { getAllUsernames, insertUsername } from "../db/queries.js";
+import { getAllUsernames, insertUsername, searchUsername } from "../db/queries.js";
 /**
  * @param {import('express').Request} req
  * @param {import('express').Response} res
@@ -25,4 +25,23 @@ export const addUserPost = async (req, res) => {
 	const { username } = req.body;
 	await insertUsername(username);
 	res.redirect('/');
+}
+
+/**
+ * @param {import('express').Request} req
+ * @param {import('express').Response} res
+ */
+export const searchUserGet = (req, res) => {
+	res.render('search.html');
+}
+
+/**
+ * @param {import('express').Request} req
+ * @param {import('express').Response} res
+ */
+export const searchUserPost = async (req, res) => {
+	const results = await searchUsername(req.body.username);
+	res.render('results.html', {
+		results: results
+	});
 }
