@@ -1,0 +1,44 @@
+services:
+  web:
+    build: .
+    depends_on:
+      - db
+    env_file:
+      - .env
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    profiles:
+      - dev
+    command: npm run server
+
+  app-test:
+    build: .
+    depends_on:
+      - db
+    env_file:
+        - .env
+    profiles:
+      - test
+    command: npm run test
+    environment:
+      NODE_ENV: test
+
+  db:
+    image: postgres:16.3
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+volumes:
+  pgdata:
