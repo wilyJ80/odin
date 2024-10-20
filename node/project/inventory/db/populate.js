@@ -8,7 +8,7 @@ const SQL = fs.readFileSync(schemaPath, 'utf8');
 const seed = (async () => {
 	console.log('seeding database...');
 	const client = new pg.Client({
-		host: 'db',
+		host: `${process.env.POSTGRES_HOST}`,
 		user: `${process.env.POSTGRES_USER}`,
 		database: `${process.env.POSTGRES_DB}`,
 		password: `${process.env.POSTGRES_PASSWORD}`,
