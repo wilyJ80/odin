@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "node --test --watch",
-    "server": "node --env-file=.env --watch ./server.js"
+    "server": "node --env-file=.env --watch ./server.js",
+    "seed": "node --env-file=.env ./db/populate.js"
   },
   "keywords": [],
   "author": "",

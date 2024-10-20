@@ -5,3 +5,7 @@
 - Test with Docker
 
 `sudo docker compose --profile test up --build`
+
+# TODO
+
+- [ ] Add reverse proxy?
