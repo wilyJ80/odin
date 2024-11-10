@@ -10,3 +10,4 @@ app.engine('html', ejs.renderFile);
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/', storeRouter);
+app.use('/categories', categoryRouter);

@@ -18,12 +18,21 @@
 
 # TODO
 
-- [X] Renders index
-- [ ] GET, POST, DELETE, PUT categories
+- Pages (free fake product store):
+    - Index: shows all categories, product search, store banner, plus all paginated products
+    - Specific category page: shows products related to the category
+    - Specific product page
+
+- [X] Renders index: get all categories and products
+    - [ ] Fix: should paginate products
+    - [ ] Init script should load some initial categories/products
+    - [ ] Emoji as image of product
+- [ ] GET, POST, DELETE, PUT specific category (for filtering products)
+- [ ] GET, POST, DELETE, PUT specific product
+- [ ] Separate category from product queries
     - [ ] route test
     - [ ] db test
     - [ ] integration test
-- [ ] GET, POST, DELETE, PUT products
 
 - [ ] Views
     - [ ] Main page: paginate? filter products?

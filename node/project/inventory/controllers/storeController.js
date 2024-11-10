@@ -1,4 +1,5 @@
-import { selectAllCategories, selectAllProducts } from "../db/queries.js";
+import { selectAllCategories } from "../db/categoryQueries.js";
+import { selectAllProducts } from "../db/productQueries.js";
 
 /**
  * @param {import('express').Request} req
