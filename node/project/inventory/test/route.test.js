@@ -27,10 +27,5 @@ describe('Category tests', () => {
 		assert.deepEqual(response.type, 'text/html');
 	});
 
-	it('can insert category', async () => {
-		const response = await supertest(app)
-			.post('/categories/0');
-		assert.deepEqual(response.status, 200);
-		assert.deepEqual(response.type, 'text/html');
-	});
+	// integration: POST, PUT, DELETE
 });

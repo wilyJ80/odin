@@ -37,4 +37,6 @@
 - [ ] Views
     - [ ] Main page: paginate? filter products?
 
+- [ ] Try catch?
+- [ ] Separate development and testing databases: want to deploy to a PaaS Postgres instance
 - [ ] Reverse Proxy?
