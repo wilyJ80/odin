@@ -6,5 +6,5 @@ import { app } from "../app.js";
 it('Should return 200', async () => {
 	const response = await supertest(app)
 		.get('/');
-	assert.equal(response.status, 200);
+	assert.deepEqual(response.status, 200);
 });

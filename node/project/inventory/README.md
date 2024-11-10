@@ -18,4 +18,14 @@
 
 # TODO
 
-- [ ] Add reverse proxy?
+- [X] Renders index
+- [ ] GET, POST, DELETE, PUT categories
+    - [ ] route test
+    - [ ] db test
+    - [ ] integration test
+- [ ] GET, POST, DELETE, PUT products
+
+- [ ] Views
+    - [ ] Main page: paginate? filter products?
+
+- [ ] Reverse Proxy?
