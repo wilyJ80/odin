@@ -23,10 +23,9 @@
     - Specific category page: shows products related to the category
     - Specific product page
 
-- [X] Renders index: get all categories and products
+- [X] Expects rendering index: get all categories and products
     - [ ] Fix: should paginate products
     - [ ] Init script should load some initial categories/products
-    - [ ] Emoji as image of product
 - [ ] GET, POST, DELETE, PUT specific category (for filtering products)
 - [ ] GET, POST, DELETE, PUT specific product
 - [ ] Separate category from product queries
@@ -38,5 +37,5 @@
     - [ ] Main page: paginate? filter products?
 
 - [ ] Try catch?
-- [ ] Separate development and testing databases: want to deploy to a PaaS Postgres instance
+- [ ] Separate development and testing databases: want to deploy to a PaaS Postgres instance. Suggestion: same credentials, different URL
 - [ ] Reverse Proxy?

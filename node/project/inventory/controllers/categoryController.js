@@ -1,4 +1,4 @@
-import { insertCategory, selectAllCategories, selectCategory } from "../db/categoryQueries.js";
+import { insertCategory, selectAllCategories, selectCategory, updateCategory } from "../db/categoryQueries.js";
 
 /**
  * @param {import('express').Request} req
@@ -27,5 +27,21 @@ export const getCategory = async (req, res) => {
  * @param {import('express').Response} res
  */
 export const addCategory = async (req, res) => {
-	await insertCategory(req.params.category);
+	await insertCategory(req.params.name);
+}
+
+/**
+ * @param {import('express').Request} req
+ * @param {import('express').Response} res
+ */
+export const putCategory = async (req, res) => {
+	await updateCategory(req.params.id);
+}
+
+/**
+ * @param {import('express').Request} req
+ * @param {import('express').Response} res
+ */
+export const deleteCategory = async (req, res) => {
+	await deleteCategory(req.params.id);
 }

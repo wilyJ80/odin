@@ -5,22 +5,28 @@ export const selectAllCategories = async () => {
 	return rows;
 }
 
-export const selectCategory = async (category) => {
-	const { rows } = await pool.query('SELECT $1 FROM categories', [category]);
+/**
+ * For... testing purposes?
+ */
+export const selectCategory = async (id) => {
+	const { rows } = await pool.query('SELECT name FROM categories WHERE id = $1', [id]);
 	return rows;
 }
 
-export const insertCategory = async (category) => {
-	const { rows } = await pool.query('INSERT INTO categories (name) VALUES ($1)', [category]);
-	return rows;
+export const insertCategory = async (name) => {
+	const { rows } = await pool.query('INSERT INTO categories (name) VALUES ($1) RETURNING id', [name]);
+	return rows[0].id;
 }
 
-export const updateCategory = async () => {
-	const { rows } = await pool.query('UPDATE categories SET name = $1 WHERE id = $2');
-	return rows;
+/**
+ * TODO: Given a name, should update the name instead?
+ */
+export const updateCategory = async (categoryName, id) => {
+	const { rows } = await pool.query('UPDATE categories SET name = $1 WHERE id = $2 RETURNING id', [categoryName, id]);
+	return rows[0].id;
 }
 
-export const deleteCategory = async () => {
-	const { rows } = await pool.query('DELETE FROM categories WHERE id = $1');
-	return rows;
+export const deleteCategory = async (id) => {
+	const { rows } = await pool.query('DELETE FROM categories WHERE id = $1 RETURNING id', [id]);
+	return rows[0].id;
 }
