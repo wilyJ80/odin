@@ -27,5 +27,21 @@ describe('Category tests', () => {
 		assert.deepEqual(response.type, 'text/html');
 	});
 
-	// integration: POST, PUT, DELETE
+	// integration/db: POST, PUT, DELETE
+});
+
+describe('Product tests', () => {
+	it('requests products page', async () => {
+		const response = await supertest(app)
+			.get('/products');
+		assert.deepEqual(response.status, 200);
+		assert.deepEqual(response.type, 'text/html');
+	});
+
+	it('requests specific product page', async () => {
+		const response = await supertest(app)
+			.get('/products/0');
+		assert.deepEqual(response.status, 200);
+		assert.deepEqual(response.type, 'text/html');
+	});
 });
