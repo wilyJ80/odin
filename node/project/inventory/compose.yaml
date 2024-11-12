@@ -10,6 +10,15 @@ services:
     profiles:
       - dev
     command: npm run server
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: .
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json
 
   app-test:
     build: .
