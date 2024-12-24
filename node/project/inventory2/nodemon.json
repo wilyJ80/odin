@@ -1,0 +1,6 @@
+{
+  "ext": "js,json,html,css",
+  "events": {
+    "restart": "node -e 'console.log()'"
+  }
+}
