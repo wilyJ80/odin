@@ -1,6 +1,8 @@
 import express from 'express';
 import ejs from 'ejs';
 
+import { indexRouter } from './routes/indexRouter.js'
+
 export const app = express();
 
 // use ejs as template engine
@@ -12,6 +14,4 @@ app.use(express.urlencoded({ extended: true }));
 // serve static files (tailwind requires)
 app.use(express.static('views'));
 
-app.get('/', (req, res) => {
-	res.render('index.html');
-});
+app.use('/', indexRouter);
