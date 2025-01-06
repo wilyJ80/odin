@@ -1,14 +1,32 @@
+DROP TABLE IF EXISTS students_classes;
+DROP TABLE IF EXISTS classes;
+DROP TABLE IF EXISTS students;
+
 CREATE TABLE students (
-		student_id INTEGER PRIMARY KEY,
-		student_name VARCHAR(150) NOT NULL
+	student_id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	student_name VARCHAR(150) NOT NULL
 );
 
-CREATE TABLE class (
-		class_id INTEGER PRIMARY KEY,
-		student_id INTEGER NOT NULL,
-		FOREIGN KEY (student_id) REFERENCES students (student_id)
+CREATE TABLE classes (
+	class_id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	class_name varchar(150) NOT NULL
+);
+
+CREATE TABLE students_classes (
+	student_id INTEGER NOT NULL,
+	class_id INTEGER NOT NULL,
+	FOREIGN KEY(student_id) REFERENCES students(student_id),
+	FOREIGN KEY(class_id) REFERENCES classes(class_id)
 );
 
 INSERT INTO students (
-		student_id, student_name
-) VALUES ( 1, 'Victor' );
+	student_name
+	) VALUES ('Victor' );
+
+INSERT INTO classes (
+	class_name
+	) VALUES (1510);
+
+INSERT INTO students_classes (
+	student_id, class_id
+	) VALUES (1, 1);
