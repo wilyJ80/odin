@@ -9,8 +9,11 @@
 </head>
 
 <body>
-	<h1>Hello...</h1>
-	<button>Yo</button>
+	<% classes.forEach(function(className) { %>
+		<p>
+			<%= className.class_name %> <!-- Access the class_name property -->
+		</p>
+		<% }); %>
 </body>
 
 </html>
