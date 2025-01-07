@@ -9,9 +9,14 @@
 </head>
 
 <body>
-	<% classes.forEach(function(className) { %>
+	<% allClasses.forEach((c)=> { %>
 		<p>
-			<%= className.class_name %> <!-- Access the class_name property -->
+			<%= c.class_name %>
+				<% c.students.forEach((s)=> { %>
+					<p>
+						<%= s %>
+					</p>
+					<% }); %>
 		</p>
 		<% }); %>
 </body>

@@ -4,7 +4,7 @@ import { pool } from './pool.js';
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  */
-export const selectAllClasses = async () => {
-	const { rows } = await pool.query('SELECT class_name FROM classes');
+export const selectAllClassesAndStudents = async () => {
+	const { rows } = await pool.query('SELECT c.class_name, s.student_name FROM students_classes sc JOIN classes c ON c.class_id = sc.class_id JOIN students s ON s.student_id = sc.student_id ORDER BY c.class_name, s.student_name');
 	return rows;
 };

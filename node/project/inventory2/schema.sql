@@ -21,12 +21,12 @@ CREATE TABLE students_classes (
 
 INSERT INTO students (
 	student_name
-	) VALUES ('Victor' );
+	) VALUES ('Victor'), ('Jose'), ('Ingrid');
 
 INSERT INTO classes (
 	class_name
-	) VALUES (1510);
+	) VALUES (1510), (9);
 
 INSERT INTO students_classes (
 	student_id, class_id
-	) VALUES (1, 1);
+	) VALUES (1, 1), (2, 2), (3, 1);
