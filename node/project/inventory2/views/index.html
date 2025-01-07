@@ -13,7 +13,7 @@
 	<% allClasses.forEach((c)=> { %>
 		<h2 class="text-4xl">
 			Class <%= c.class_name %>
-				<button>+</button>
+				<button>-</button>
 		</h2>
 		<% c.students.forEach((s)=> { %>
 			<div>
@@ -22,6 +22,7 @@
 			</div>
 			<% }); %>
 				<% }); %>
+					<h2 class="text-4xl">Add Class +</h2>
 </body>
 
 </html>
