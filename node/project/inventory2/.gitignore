@@ -2,3 +2,4 @@ node_modules
 views/css/output.css
 logfile
 .env
+public/css/*

@@ -5,20 +5,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-	<link href="./css/output.css" rel="stylesheet">
+	<link href="../css/output.css" rel="stylesheet">
 </head>
 
 <body>
+	<h1 class="text-8xl">CLASSES</h1>
 	<% allClasses.forEach((c)=> { %>
-		<p>
-			<%= c.class_name %>
-				<% c.students.forEach((s)=> { %>
-					<p>
-						<%= s %>
-					</p>
-					<% }); %>
-		</p>
-		<% }); %>
+		<h2 class="text-4xl">
+			Class <%= c.class_name %>
+				<button>+</button>
+		</h2>
+		<% c.students.forEach((s)=> { %>
+			<div>
+				<%= s %>
+					<button>-</button>
+			</div>
+			<% }); %>
+				<% }); %>
 </body>
 
 </html>

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predev": "npx tailwindcss -i ./views/css/input.css -o ./views/css/output.css",
+    "predev": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css",
     "dev": "nodemon server.js",
     "seed": "node ./db/populate.js"
   },

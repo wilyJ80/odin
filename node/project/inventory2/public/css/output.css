@@ -553,3 +553,18 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
+
+.min-h-max {
+  min-height: -moz-max-content;
+  min-height: max-content;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}

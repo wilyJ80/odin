@@ -12,7 +12,6 @@ app.engine('html', ejs.renderFile);
 // parse request body
 app.use(express.urlencoded({ extended: true }));
 // serve static files (tailwind requires)
-// app.use(express.static('views'));
-app.use(express.static('views/css'));
+app.use(express.static('public'));
 
 app.use('/', indexRouter);
