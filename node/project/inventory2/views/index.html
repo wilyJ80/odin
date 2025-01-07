@@ -9,20 +9,25 @@
 </head>
 
 <body>
-	<h1 class="text-8xl">CLASSES</h1>
+	<h1 class="text-4xl font-bold">CLASSES</h1>
 	<% allClasses.forEach((c)=> { %>
 		<h2 class="text-4xl">
 			Class <%= c.class_name %>
 				<button>-</button>
 		</h2>
-		<% c.students.forEach((s)=> { %>
-			<div>
-				<%= s %>
-					<button>-</button>
-			</div>
-			<% }); %>
-				<% }); %>
-					<h2 class="text-4xl">Add Class +</h2>
+		<% for(let i=0; i < c.students.length; i++) { %>
+			<% if (i> 4) { %>
+				<a href="" class="font-bold">See more</a>
+				<% break; %>
+					<% } else { %>
+						<div class="text-2xl">
+							<%= c.students[i]; %>
+								<button>-</button>
+						</div>
+						<% } %>
+							<% } %>
+								<% }); %>
+									<h2 class="text-4xl font-bold">Add Class +</h2>
 </body>
 
 </html>

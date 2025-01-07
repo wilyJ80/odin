@@ -21,7 +21,7 @@ CREATE TABLE students_classes (
 
 INSERT INTO students (
 	student_name
-	) VALUES ('Victor'), ('Jose'), ('Ingrid');
+	) VALUES ('Victor'), ('Jose'), ('Ingrid'), ('Daniel'), ('Ivan'), ('Joshua'), ('Lucas');
 
 INSERT INTO classes (
 	class_name
@@ -29,4 +29,4 @@ INSERT INTO classes (
 
 INSERT INTO students_classes (
 	student_id, class_id
-	) VALUES (1, 1), (2, 2), (3, 1);
+	) VALUES (1, 1), (2, 2), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1);

@@ -18,7 +18,8 @@
 
     - [ ] Dedicated page for viewing student, create extra info for them in the db (age)
 
-- Create, delete and update behind admin password
+> [!NOTE]
+> Create, delete and update behind admin password
 
 - [ ] Create
 
