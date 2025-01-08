@@ -8,7 +8,7 @@ dotenv.config();
 const schemaPath = path.join(import.meta.dirname, '../schema.sql');
 const sql = fs.readFileSync(schemaPath, 'utf8');
 
-const seeding = (async () => {
+(async () => {
 	console.log('Seeding database...');
 	const client = new pg.Client({
 		host: `${process.env.POSTGRES_HOST}`,

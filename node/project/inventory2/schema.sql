@@ -9,7 +9,7 @@ CREATE TABLE students (
 
 CREATE TABLE classes (
 	class_id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-	class_name varchar(150) NOT NULL
+	class_name VARCHAR(150) NOT NULL
 );
 
 CREATE TABLE students_classes (
