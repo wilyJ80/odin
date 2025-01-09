@@ -12,7 +12,7 @@
 		<h1 class="text-4xl font-bold">CLASSES</h1>
 		<% allClasses.forEach((c)=> { %>
 		<h2 class="text-4xl">
-			Class <%= c.class_name %>
+			Class <%= c.class.class_name %>
 			<button>-</button>
 		</h2>
 		<% for(let i=0; i < c.students.length; i++) { %>
@@ -21,7 +21,7 @@
 			<% break; %>
 			<% } else { %>
 			<div class="text-2xl">
-				<%= c.students[i]; %>
+				<%= c.students[i].student_name; %>
 				<button>-</button>
 			</div>
 			<% } %>
