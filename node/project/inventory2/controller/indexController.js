@@ -1,19 +1,12 @@
-import { selectAllClassesAndStudents } from '../db/classQueries.js';
+import { selectClassPreview } from '../db/classQueries.js';
 
 /**
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  */
 export const getIndex = async (req, res) => {
-	const results = await selectAllClassesAndStudents();
-	//console.log(results);
-	//const grouped = Object.groupBy(results, ({ class_name }) => class_name);
-	//const allClasses = Object.entries(grouped).map(([class_name, students]) => ({
-	//	class_name,
-	//	students: students.map(({ student_name }) => student_name)
-	//}));
+	const results = await selectClassPreview();
 	const transformed = transformRows(results);
-	console.log(transformed);
 	res.render('index.html', {
 		allClasses: transformed
 	});

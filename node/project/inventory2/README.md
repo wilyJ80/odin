@@ -14,8 +14,6 @@
     
     - [x] Displays all students.
 
-    - [ ] Displays students with limit (see more...) and dedicated page for full class (behind admin password).
-
     - [ ] Dedicated page for viewing student, create extra info for them in the db (age)
 
 > [!NOTE]

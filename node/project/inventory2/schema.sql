@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS students;
 
 CREATE TABLE students (
 	student_id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-	student_name VARCHAR(150) NOT NULL
+	student_name VARCHAR(150) NOT NULL,
+	student_age INTEGER NOT NULL
 );
 
 CREATE TABLE classes (
@@ -20,8 +21,9 @@ CREATE TABLE students_classes (
 );
 
 INSERT INTO students (
-	student_name
-	) VALUES ('Victor'), ('Jose'), ('Ingrid'), ('Daniel'), ('Ivan'), ('Joshua'), ('Lucas');
+	student_name,
+	student_age
+	) VALUES ('Victor', 13), ('Jose', 12), ('Ingrid', 22), ('Daniel', 10), ('Ivan', 9), ('Joshua', 31), ('Lucas', 8), ('Adam', 18), ('Chris', 15), ('Diana', 3);
 
 INSERT INTO classes (
 	class_name
@@ -29,4 +31,4 @@ INSERT INTO classes (
 
 INSERT INTO students_classes (
 	student_id, class_id
-	) VALUES (1, 1), (2, 2), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1);
+	) VALUES (1, 1), (2, 2), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 2), (9, 2), (10, 2);

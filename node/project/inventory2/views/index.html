@@ -16,20 +16,16 @@
 			<button>-</button>
 		</h2>
 		<% for(let i=0; i < c.students.length; i++) { %>
-			<% if (i> 4) { %>
-			<a href="" class="font-bold">See more</a>
-			<% break; %>
-			<% } else { %>
 			<div class="text-2xl">
 				<%= c.students[i].student_name; %>
-				<button>-</button>
+				<a href="/students/<%= c.students[i].student_id %>">...</a>
 			</div>
 			<% } %>
-			<% } %>
-			<h2 class="text-4xl font-bold">
-				<a href="/classes/<%= c.class_id %>">Add Class +</a>
+			<h2 class="text-2xl font-bold">
+				<a href="">Add student +</a>
 			</h2>
 			<% }); %>
+			<h2 class="text-4xl font-bold">Add Class +</h2>
 	</body>
 
 </html>
