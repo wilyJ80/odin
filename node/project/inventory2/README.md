@@ -19,9 +19,9 @@
 
 - [ ] Create
 
-    - [ ] Can add more students to classes (dedicated page for adding student)
+    - [ ] Can add more students to classes
 
-    - [ ] Can add more classes (dedicated page for adding class)
+    - [ ] Can add more classes
 
 - [ ] Delete
 

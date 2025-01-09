@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
-		<link href="../css/output.css" rel="stylesheet">
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link href="../css/output.css" rel="stylesheet">
+</head>
 
-	<body>
-		<h1 class="text-4xl font-bold">CLASSES</h1>
-		<% allClasses.forEach((c)=> { %>
+<body>
+	<h1 class="text-4xl font-bold">CLASSES</h1>
+	<% allClasses.forEach((c)=> { %>
 		<h2 class="text-4xl">
 			Class <%= c.class.class_name %>
-			<button>-</button>
+				<button>-</button>
 		</h2>
 		<% for(let i=0; i < c.students.length; i++) { %>
 			<div class="text-2xl">
 				<%= c.students[i].student_name; %>
-				<a href="/students/<%= c.students[i].student_id %>">...</a>
+					<a href="/students/<%= c.students[i].student_id %>">...</a>
 			</div>
 			<% } %>
-			<h2 class="text-2xl font-bold">
-				<a href="">Add student +</a>
-			</h2>
-			<% }); %>
-			<h2 class="text-4xl font-bold">Add Class +</h2>
-	</body>
+				<h2 class="text-2xl font-bold">
+					<button id="add-student-btn">Add student +</button>
+					<form action="" method="post" class="hidden" id="add-student-form">
+						<input type="text" name="student" class="ring-2" required>
+						<button>+</button>
+					</form>
+				</h2>
+				<% }); %>
+					<h2 class="text-4xl font-bold">Add Class +</h2>
+
+					<script src="../js/index.js">
+					</script>
+</body>
 
 </html>
