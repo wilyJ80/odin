@@ -2,6 +2,7 @@ import express from 'express';
 import ejs from 'ejs';
 
 import { indexRouter } from './routes/indexRouter.js'
+import { studentRouter } from './routes/studentRouter.js';
 
 export const app = express();
 
@@ -15,3 +16,4 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.use('/', indexRouter);
+app.use('/students', studentRouter);

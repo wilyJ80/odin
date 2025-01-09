@@ -10,11 +10,9 @@
 
 # TODO:
 
-- [ ] Read
+- [x] Read
     
     - [x] Displays all students.
-
-    - [ ] Dedicated page for viewing student, create extra info for them in the db (age)
 
 > [!NOTE]
 > Create, delete and update behind admin password
