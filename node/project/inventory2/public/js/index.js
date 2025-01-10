@@ -1,8 +1,5 @@
-document.body.addEventListener('DOMContentLoaded', () => {
-	alert('hey');
-	const studentAddForm = document.querySelector('#add-student-form');
-	const studentAddBtn = document.querySelector('#add-student-btn');
-	studentAddBtn.addEventListener('click', () => {
-		studentAddForm.classList.toggle('hidden');
-	});
+const studentAddForm = document.querySelector('#add-student-form');
+const studentAddBtn = document.querySelector('#add-student-btn');
+studentAddBtn.addEventListener('click', () => {
+	studentAddForm.classList.toggle('hidden');
 });
