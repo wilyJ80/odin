@@ -15,5 +15,6 @@ app.use(express.urlencoded({ extended: true }));
 // serve static files (tailwind requires)
 app.use(express.static('public'));
 
+// Routers
 app.use('/', indexRouter);
 app.use('/students', studentRouter);
