@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+
+	<body>
+		<a href="./sign-up">Sign up</a>
+
+		<h1>Index</h1>
+
+		<% if (user) { %>
+		<h1>WELCOME BACK <%= user.username %></h1>
+		<a href="/log-out">LOG OUT</a>
+		<% } else { %>
+		<h2>Please log in:</h2>
+		<form action="/log-in" method="POST">
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" placeholder="username">
+			<label for="password">Password</label>
+			<input type="text" name="password" id="password" placeholder="password">
+			<button>Log In</button>
+		</form>
+		<% } %>
+
+		<h2>Users:</h2>
+		<dl>
+			<% users.forEach((user)=> { %>
+			<dt>
+				<%= user.username %>
+			</dt>
+			<dd>
+				<%= user.password %>
+			</dd>
+			<% }); %>
+		</dl>
+	</body>
+
+</html>
