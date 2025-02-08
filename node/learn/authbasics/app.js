@@ -23,7 +23,8 @@ app.get('/', async (req, res, next) => {
 		const rows = users.rows;
 		res.render('index.html', {
 			users: rows,
-			user: req.user
+			user: req.user,
+			messages: req.session.messages
 		});
 	} catch (error) {
 		return next(error);
@@ -85,7 +86,8 @@ app.post(
 	'/log-in',
 	passport.authenticate('local', {
 		successRedirect: '/',
-		failureRedirect: '/'
+		failureRedirect: '/',
+		failureMessage: true
 	})
 );
 
