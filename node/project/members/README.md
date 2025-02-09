@@ -1,3 +1,11 @@
+# How to run
+
+1. Fill in `.env` based on `env.example`
+
+2. Create database corresponding to `POSTGRES_DB` variable
+
+3. Run `npm run seed`
+
 # Pages
 
 1. Index

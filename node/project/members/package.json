@@ -8,7 +8,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./server.js"
+    "dev": "nodemon ./server.js",
+    "seed": "node --env-file=.env ./db/populate.js"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
