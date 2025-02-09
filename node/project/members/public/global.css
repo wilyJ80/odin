@@ -1,6 +1,6 @@
 :root {
 	--main-color: orange;
-	--button-color: azure;
+	color: antiquewhite;
 }
 
 body {
@@ -8,17 +8,26 @@ body {
 }
 
 nav {
+
+	display: grid;
+	grid-auto-flow: column;
+	gap: 1rem;
+
 	& a {
-		border: 1px solid #000;
-		background-color: var(--button-color);
+		border: 1px solid antiquewhite;
+		border-radius: 0.5rem;
 		font-size: 1.3rem;
+		font-weight: bold;
+		padding: 0.5rem;
 
 		&:hover {
-			background-color: yellow;
+			background-color: fuchsia;
 		}
 	}
 }
 
 #title {
 	font-size: 3rem;
+	color: antiquewhite;
+	font-weight: bold;
 }
