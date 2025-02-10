@@ -10,11 +10,11 @@
 
 # Pages
 
-1. Index
+1. Index **OK**
 
     - Links to login, sign up...
 
-    - All Messages (anonymized and without date except same club members)
+    - All Messages (only names and dates)
 
 2. Login
 
@@ -57,3 +57,5 @@
     - Admin can delete messages anywhere
 
     - Admin has access to all groups
+
+# Add design diagram for the app for future reference
