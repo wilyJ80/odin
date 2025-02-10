@@ -4,7 +4,9 @@
 
 2. Create database corresponding to `POSTGRES_DB` variable
 
-3. Run `npm run seed`
+3. Run `npm run seed` to populate database
+
+4. Run `npm run dev` for dev server
 
 # Pages
 

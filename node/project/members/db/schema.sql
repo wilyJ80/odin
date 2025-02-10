@@ -63,3 +63,25 @@ CREATE TABLE messages (
 	member_id INTEGER NOT NULL,
 	FOREIGN KEY (member_id) REFERENCES members (member_id)
 );
+
+-- Test data
+
+INSERT INTO members (member_firstname, member_lastname, member_email, password, salt) VALUES ('Firstson', 'Lastson', 'fl@gmail.com' 'secret', 'salty');
+
+INSERT INTO messages (
+	message_title,
+	message_content,
+	message_date,
+	member_id
+	) VALUES (
+	'Something',
+	'I have no ideas',
+	CURRENT_DATE,
+	1
+	),
+	(
+	'New message',
+	'I do not think I have more ideas',
+	CURRENT_DATE,
+	1
+	);
