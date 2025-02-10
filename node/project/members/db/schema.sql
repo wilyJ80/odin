@@ -66,7 +66,7 @@ CREATE TABLE messages (
 
 -- Test data
 
-INSERT INTO members (member_firstname, member_lastname, member_email, password, salt) VALUES ('Firstson', 'Lastson', 'fl@gmail.com' 'secret', 'salty');
+INSERT INTO members (member_firstname, member_lastname, member_email, password, salt) VALUES ('Firstson', 'Lastson', 'fl@gmail.com', 'secret', 'salty');
 
 INSERT INTO messages (
 	message_title,

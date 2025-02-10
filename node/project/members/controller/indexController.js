@@ -9,7 +9,7 @@ const IndexController = class {
 	 * @param {import('express').Request} req 
 	 * @param {import('express').Response} res 
 	*/
-	async getIndex(req, res) {
+	getIndex = async (req, res) => {
 		const messages = await this.messages.selectMessagesSummarized();
 		return res.render('index.html', {
 			messages: messages

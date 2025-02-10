@@ -20,6 +20,12 @@
 
 	<h1 id="title">Welcome to my message app!</h1>
 
+	<% if (messages) { %>
+		<% messages.forEach((message) => { %>
+		<p><%= message.member_firstname %> <%= message.member_lastname %></p>
+		<p><%= message.message_date.toLocaleDateString() %></p>
+		<% }); %>
+	<% } %>
 
 </body>
 
