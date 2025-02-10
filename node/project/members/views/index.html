@@ -13,6 +13,10 @@
 
 	<%- include('./partials/nav.html') %>
 
+	<% if (user) { %>
+		<p>Logged In as <%= user.member_firstname %></p>
+	<% } %>
+
 	<h1 id="title">Welcome to my message app!</h1>
 
 	<% if (messages) { %>
