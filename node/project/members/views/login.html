@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
-		<link href="./preflight.css" rel="stylesheet">
-		<link href="./global.css" rel="stylesheet">
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link href="./preflight.css" rel="stylesheet">
+	<link href="./global.css" rel="stylesheet">
+</head>
 
-	<body>
+<body>
 
-		<%- include('./partials/nav.html') %>
+	<%- include('./partials/nav.html') %>
 
 		<h1 id="title">Log In</h1>
 
-		<form action="/login" method="POST">
+		<form action="session/login" method="POST">
 			<label for="email">E-mail:</label>
 			<input type="email" name="email" placeholder="email" id="email">
 			<label for="password">Password:</label>
@@ -23,6 +23,6 @@
 			<button>Log In</button>
 		</form>
 
-	</body>
+</body>
 
 </html>

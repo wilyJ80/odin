@@ -1,6 +1,6 @@
 import passport from 'passport';
 
-const LoginController = class {
+const SessionController = class {
 
 	/**
 	 * @param {import('express').Request} req 
@@ -21,6 +21,19 @@ const LoginController = class {
 			failureMessage: true
 		});
 	}
+
+	/**
+	 * @param {import('express').Request} req 
+	 * @param {import('express').Response} res 
+	*/
+	performLogout = async (req, res, next) => {
+		req.logout((err) => {
+			if (err) {
+				return next(err);
+			}
+			res.redirect('/');
+		});
+	}
 }
 
-export const loginController = new LoginController();
+export const sessionController = new SessionController();

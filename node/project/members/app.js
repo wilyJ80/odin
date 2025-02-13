@@ -1,8 +1,7 @@
 import express from "express";
 import ejs from 'ejs';
 import { indexRouter } from "./routes/indexRouter.js";
-import { loginRouter } from "./routes/loginRouter.js";
-import { logoutRouter } from "./routes/logoutRouter.js";
+import { sessionRouter } from "./routes/sessionRouter.js";
 
 export const app = express();
 
@@ -18,5 +17,4 @@ app.use(express.static('public'));
 
 // Routers
 app.use('/', indexRouter);
-app.use('/login', loginRouter);
-app.use('/logout', logoutRouter);
+app.use('/session', sessionRouter);
