@@ -1,4 +1,5 @@
 import passport from 'passport';
+import bcryptjs from 'bcryptjs';
 
 const SessionController = class {
 

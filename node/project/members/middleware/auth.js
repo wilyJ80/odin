@@ -9,6 +9,7 @@ app.use(session({
 	resave: false,
 	saveUninitialized: false
 }));
+
 app.use(passport.session());
 
 passport.use(
@@ -47,4 +48,11 @@ passport.deserializeUser(async (id, done) => {
 	} catch (error) {
 		done(error);
 	}
+});
+
+// pass user object to global variable
+
+app.use((req, res, next) => {
+	res.locals.currentUser = req.user;
+	next();
 });

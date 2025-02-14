@@ -13,9 +13,12 @@
 
 	<%- include('./partials/nav.html') %>
 
-		<% if (user) { %>
+		<% if (currentUser) { %>
 			<p>Logged In as <%= user.member_firstname %>
 			</p>
+			<form action="/session/logout" method="POST">
+				<button>LOGOUT</button>
+			</form>
 			<% } %>
 
 				<h1 id="title">Welcome to my message app!</h1>
