@@ -12,8 +12,7 @@ const IndexController = class {
 	getIndex = async (req, res) => {
 		const messages = await this.messages.selectMessagesSummarized();
 		return res.render('index.html', {
-			messages: messages,
-			user: req.user
+			messages: messages
 		});
 	}
 }

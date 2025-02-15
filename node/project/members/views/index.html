@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link href="/preflight.css" rel="stylesheet">
-	<link href="/global.css" rel="stylesheet">
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link href="/preflight.css" rel="stylesheet">
+		<link href="/global.css" rel="stylesheet">
+	</head>
 
-<body>
+	<body>
 
-	<%- include('./partials/nav.html') %>
+		<%- include('./partials/nav.html') %>
 
 		<% if (currentUser) { %>
-			<p>Logged In as <%= user.member_firstname %>
-			</p>
-			<form action="/session/logout" method="POST">
-				<button>LOGOUT</button>
-			</form>
-			<% } %>
+		<p>Logged In as <%= currentUser.member_firstname %>
+		</p>
+		<form action="/session/logout" method="POST">
+			<button>LOGOUT</button>
+		</form>
+		<% } %>
 
-				<h1 id="title">Welcome to my message app!</h1>
+		<h1 id="title">Welcome to my message app!</h1>
 
-				<% if (messages) { %>
-					<% messages.forEach((message)=> { %>
-						<p>
-							<%= message.member_firstname %>
-								<%= message.member_lastname %>
-						</p>
-						<p>
-							<%= message.message_date.toLocaleDateString() %>
-						</p>
-						<% }); %>
-							<% } %>
+		<% if (messages) { %>
+		<% messages.forEach((message)=> { %>
+		<p>
+			<%= message.member_firstname %>
+			<%= message.member_lastname %>
+		</p>
+		<p>
+			<%= message.message_date.toLocaleDateString() %>
+		</p>
+		<% }); %>
+		<% } %>
 
-</body>
+	</body>
 
 </html>

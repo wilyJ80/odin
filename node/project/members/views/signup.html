@@ -13,14 +13,18 @@
 
 	<%- include('./partials/nav.html') %>
 
-		<h1 id="title">Log In</h1>
+		<h1 id="title">Sign Up</h1>
 
-		<form action="/session/login" method="POST">
+		<form action="/session/signup" method="POST">
 			<label for="email">E-mail:</label>
 			<input type="email" name="email" placeholder="email" id="email" required>
+			<label for="firstname">First Name:</label>
+			<input type="text" name="firstname" id="firstname" placeholder="firstname" required>
+			<label for="lastname">Last Name:</label>
+			<input type="text" name="lastname" id="lastname" placeholder="lastname" required>
 			<label for="password">Password:</label>
 			<input type="password" name="password" id="password" placeholder="password" required>
-			<button>Log In</button>
+			<button>Sign Up</button>
 		</form>
 
 </body>

@@ -12,8 +12,7 @@ CREATE TABLE members (
 	member_firstname VARCHAR(32) NOT NULL,
 	member_lastname VARCHAR(32) NOT NULL,
 	member_email VARCHAR(32) NOT NULL,
-	password VARCHAR (255) NOT NULL,
-	salt VARCHAR (255) NOT NULL
+	password VARCHAR (255) NOT NULL
 );
 
 CREATE TABLE clubs (
@@ -66,7 +65,7 @@ CREATE TABLE messages (
 
 -- Test data
 
-INSERT INTO members (member_firstname, member_lastname, member_email, password, salt) VALUES ('Firstson', 'Lastson', 'fl@gmail.com', 'secret', 'salty');
+INSERT INTO members (member_firstname, member_lastname, member_email, password) VALUES ('Firstson', 'Lastson', 'fl@gmail.com', 'secret');
 
 INSERT INTO messages (
 	message_title,
