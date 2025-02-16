@@ -12,6 +12,7 @@ export const setupAuth = (app) => {
 		saveUninitialized: false
 	}));
 
+	app.use(passport.initialize());
 	app.use(passport.session());
 
 	passport.use(
@@ -38,7 +39,7 @@ export const setupAuth = (app) => {
 	)
 
 	passport.serializeUser((user, done) => {
-		done(null, user.id);
+		done(null, user.member_id);
 	});
 
 	passport.deserializeUser(async (id, done) => {

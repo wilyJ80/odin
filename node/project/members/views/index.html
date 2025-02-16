@@ -13,12 +13,18 @@
 
 		<%- include('./partials/nav.html') %>
 
-		<% if (currentUser) { %>
+		<% if (user) { %>
+		<p>User found</p>
+		<% } %>
+
+		<% if (locals.currentUser) { %>
 		<p>Logged In as <%= currentUser.member_firstname %>
 		</p>
 		<form action="/session/logout" method="POST">
 			<button>LOGOUT</button>
 		</form>
+		<% } else { %>
+		<p>User not logged in</p>
 		<% } %>
 
 		<h1 id="title">Welcome to my message app!</h1>

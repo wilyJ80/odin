@@ -63,9 +63,21 @@ CREATE TABLE messages (
 	FOREIGN KEY (member_id) REFERENCES members (member_id)
 );
 
+-- Mandatory session table (connect-pg-simple)
+CREATE TABLE "session" (
+  "sid" varchar NOT NULL COLLATE "default",
+  "sess" json NOT NULL,
+  "expire" timestamp(6) NOT NULL
+)
+WITH (OIDS=FALSE);
+
+ALTER TABLE "session" ADD CONSTRAINT "session_pkey" PRIMARY KEY ("sid") NOT DEFERRABLE INITIALLY IMMEDIATE;
+
+CREATE INDEX "IDX_session_expire" ON "session" ("expire");
+
 -- Test data
 
-INSERT INTO members (member_firstname, member_lastname, member_email, password) VALUES ('Firstson', 'Lastson', 'fl@gmail.com', 'secret');
+INSERT INTO members (member_firstname, member_lastname, member_email, password) VALUES ('Firstson', 'Lastson', 'fl@gmail.com', '$2a$10$kqHrtppetNyGbcFxChes1uP8l6Ee5Zueel6bJRDJAxoLHatjwS3kW');
 
 INSERT INTO messages (
 	message_title,

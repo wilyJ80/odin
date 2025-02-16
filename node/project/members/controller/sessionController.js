@@ -21,8 +21,7 @@ const SessionController = class {
 			successRedirect: '/',
 			failureRedirect: '/',
 			failureMessage: true
-		});
-		res.redirect('/');
+		})(req, res, next);
 	}
 
 	/**

@@ -7,7 +7,7 @@ const Members = class {
 
 	async selectMemberEmail(passportUsername) {
 		const sql = `
-SELECT member_email, password FROM members WHERE member_email = $1
+SELECT member_id, member_email, password, member_firstname FROM members WHERE member_email = $1
 `;
 		const { rows } = await pool.query(sql, [passportUsername]);
 		return rows;
