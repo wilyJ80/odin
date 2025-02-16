@@ -1,6 +1,4 @@
-# TODO: Login
-
-[login](https://www.theodinproject.com/lessons/node-path-nodejs-authentication-basics#log-in-form)
+# Will do another project, this is just for documentation on how to use passport
 
 # How to run
 

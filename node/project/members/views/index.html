@@ -13,15 +13,11 @@
 
 		<%- include('./partials/nav.html') %>
 
-		<% if (user) { %>
-		<p>User found</p>
-		<% } %>
-
 		<% if (locals.currentUser) { %>
 		<p>Logged In as <%= currentUser.member_firstname %>
 		</p>
 		<form action="/session/logout" method="POST">
-			<button>LOGOUT</button>
+			<button style="background-color: rebeccapurple">LOGOUT</button>
 		</form>
 		<% } else { %>
 		<p>User not logged in</p>

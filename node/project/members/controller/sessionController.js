@@ -19,7 +19,7 @@ const SessionController = class {
 	postLogin = async (req, res, next) => {
 		passport.authenticate('local', {
 			successRedirect: '/',
-			failureRedirect: '/',
+			failureRedirect: '/session/login',
 			failureMessage: true
 		})(req, res, next);
 	}
